@@ -1,0 +1,182 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\abstractdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\abstractdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|c:\\users\\thinkpad\\workspace\\analista_programador\\4to_semestre\\videojuegos\\retro_dungeon\\assets\\_scripts\\proceduralgenerationalgorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\proceduralgenerationalgorithms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\corridorfirstdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\corridorfirstdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15F12650-CBFF-6FBE-75E5-AD843C0C5DF9}|Assembly-CSharp-Editor.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\editor\\randomdungeongeneratoreditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15F12650-CBFF-6FBE-75E5-AD843C0C5DF9}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\randomdungeongeneratoreditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\tilemapvisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\tilemapvisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\simplerandomwalkdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\simplerandomwalkdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\wallgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\wallgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\walltypeshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\walltypeshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\roomfirstdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\roomfirstdungeongenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\assets\\_scripts\\data\\simplerandomwalkso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0794A0-2D95-90FF-F97A-9925497FD2F3}|Assembly-CSharp.csproj|solutionrelative:assets\\_scripts\\data\\simplerandomwalkso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProceduralGenerationAlgorithms.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\ProceduralGenerationAlgorithms.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\ProceduralGenerationAlgorithms.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\ProceduralGenerationAlgorithms.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\ProceduralGenerationAlgorithms.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAkwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:00:06.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SimpleRandomWalkDungeonGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\SimpleRandomWalkDungeonGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\SimpleRandomWalkDungeonGenerator.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\SimpleRandomWalkDungeonGenerator.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\SimpleRandomWalkDungeonGenerator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T23:32:25.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TileMapVisualizer.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\TileMapVisualizer.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\TileMapVisualizer.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\TileMapVisualizer.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\TileMapVisualizer.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAA5wBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T01:55:46.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RandomDungeonGeneratorEditor.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\Editor\\RandomDungeonGeneratorEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\RandomDungeonGeneratorEditor.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\Editor\\RandomDungeonGeneratorEditor.cs",
+              "RelativeToolTip": "Assets\\Editor\\RandomDungeonGeneratorEditor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T13:41:57.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CorridorFirstDungeonGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\CorridorFirstDungeonGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\CorridorFirstDungeonGenerator.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\CorridorFirstDungeonGenerator.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\CorridorFirstDungeonGenerator.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T16:34:14.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AbstractDungeonGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\AbstractDungeonGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\AbstractDungeonGenerator.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\AbstractDungeonGenerator.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\AbstractDungeonGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T13:22:21.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WallGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\WallGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\WallGenerator.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\WallGenerator.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\WallGenerator.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowBQAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T18:24:29.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WallTypesHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\WallTypesHelper.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\WallTypesHelper.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\WallTypesHelper.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\WallTypesHelper.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAqwIsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T02:47:31.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoomFirstDungeonGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\RoomFirstDungeonGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\RoomFirstDungeonGenerator.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\RoomFirstDungeonGenerator.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\RoomFirstDungeonGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T01:15:51.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SimpleRandomWalkSO.cs",
+              "DocumentMoniker": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\Data\\SimpleRandomWalkSO.cs",
+              "RelativeDocumentMoniker": "Assets\\_Scripts\\Data\\SimpleRandomWalkSO.cs",
+              "ToolTip": "C:\\Users\\Thinkpad\\workspace\\analista_programador\\4to_Semestre\\Videojuegos\\retro_dungeon\\Assets\\_Scripts\\Data\\SimpleRandomWalkSO.cs",
+              "RelativeToolTip": "Assets\\_Scripts\\Data\\SimpleRandomWalkSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T14:17:31.64Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
