@@ -21,3 +21,4 @@ Packages/com.unity.collab-proxy/
 *.mdb
 *.opendb
 *.VC.db
+.vs/

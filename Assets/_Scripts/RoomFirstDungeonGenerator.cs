@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -16,9 +17,56 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField]
     private bool randomWalkRooms = false;
 
+    [Header("Spawning de Entidades")]
+    [SerializeField]
+    RoomContentGenerator roomContentGenerator;
+
+    private DungeonData dungeonData = new DungeonData();
+    private Dictionary<Vector2Int, HashSet<Vector2Int>> roomsDictionary = new Dictionary<Vector2Int, HashSet<Vector2Int>>();
+
+    //    // Método estándar para iniciar la lógica cuando se pulsa Play en Unity
+    //    void Start()
+    //    {
+    //        // Verifica que el visualizador esté listo antes de intentar pintar
+    //        if (tilemapVisualizer != null)
+    //        {
+    //            RunProceduralGeneration();
+    //        }
+    //        else
+    //        {
+    //            Debug.LogError("tilemapVisualizer es NULL. No se puede iniciar la generación.");
+    //        }
+    //}
     protected override void RunProceduralGeneration()
     {
+        // Esto asegura que la secuencia de números aleatorios sea diferente en cada ejecución.
+        UnityEngine.Random.InitState((int)System.DateTime.Now.Ticks);
+
+        roomsDictionary.Clear();
         CreateRooms();
+    }
+
+    private HashSet<Vector2Int> IncreaseCorridorBrush2y2(HashSet<Vector2Int> corridor)
+    {
+        HashSet<Vector2Int> newCorridor = new HashSet<Vector2Int>();
+
+        // Offsets para una brocha 3x3
+        List<Vector2Int> offsets = new List<Vector2Int>
+    {
+        new Vector2Int(0, 0), // La baldosa original
+        new Vector2Int(1, 0), // La baldosa a la derecha
+        new Vector2Int(0, 1), // La baldosa de arriba
+        new Vector2Int(1, 1), // La baldosa diagonal (arriba-derecha)
+    };
+
+        foreach (var position in corridor)
+        {
+            foreach (var offset in offsets)
+            {
+                newCorridor.Add(position + offset);
+            }
+        }
+        return newCorridor;
     }
 
     private void CreateRooms()
@@ -26,46 +74,69 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         var roomsList = ProceduralGenerationAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int
             (dungeonWidth, dungeonHeight)), minRoomWidth, minRoomHeight);
 
-        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
 
-        if (randomWalkRooms)
+        //LLenar el diccionario de salas y obtener los centros
+        foreach (var roomBounds in roomsList)
         {
-            floor = CreateRoomsRandomly(roomsList);
-        }
-        else
-        {
-            floor = CreateSimpleRooms(roomsList);
+            HashSet<Vector2Int> currentRoomFloor;
+            Vector2Int roomCenter = (Vector2Int)Vector3Int.RoundToInt(roomBounds.center);
+
+            if (randomWalkRooms)
+            {
+                currentRoomFloor = CreateSingleRandomRoom(roomBounds);
+                //floor = CreateRoomsRandomly(roomsList);
+            }
+            else
+            {
+                currentRoomFloor = CreateSingleSimpleRoom(roomBounds);
+                //floor = CreateSimpleRooms(roomsList);
+            }
+
+            if (currentRoomFloor.Count > 0)
+            {
+                roomsDictionary.Add(roomCenter, currentRoomFloor);
+            }
+
         }
 
+        HashSet<Vector2Int> floor = roomsDictionary.Values.SelectMany(x => x).ToHashSet();
+        List<Vector2Int> roomCenters = roomsDictionary.Keys.ToList();
 
-        List<Vector2Int> roomCenters = new List<Vector2Int>();
-        foreach (var room in roomsList)
-        {
-            roomCenters.Add((Vector2Int)Vector3Int.RoundToInt(room.center));
-        }
+        HashSet<Vector2Int> initialCorridors = ConnectRooms(roomCenters);
+        HashSet<Vector2Int> wideCorridors = IncreaseCorridorBrush2y2(initialCorridors);
 
-        HashSet<Vector2Int> corridors = ConnectRooms(roomCenters);
-        floor.UnionWith(corridors);
+        floor.UnionWith(wideCorridors);
+
+        // LLenar el objeto DungeonData
+        dungeonData.roomsDictionary = roomsDictionary;
+        dungeonData.floorPositions = floor;
+        dungeonData.corridorPositions = wideCorridors;
 
         tilemapVisualizer.PaintFloorTiles(floor);
         WallGenerator.CreateWalls(floor, tilemapVisualizer);
+
+        //Invocar controlador de spawn
+        if (roomContentGenerator != null)
+        {
+            // Pasamos el objeto DungeonData COMPLETO al spawner.
+            roomContentGenerator.GenerateRoomContent(dungeonData);
+        }
+
     }
 
-    private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
+    private HashSet<Vector2Int> CreateSingleRandomRoom(BoundsInt roomBounds)
     {
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
-        for (int i = 0; i < roomsList.Count; i++)
+        var roomCenter = new Vector2Int(Mathf.RoundToInt(roomBounds.center.x), Mathf.RoundToInt(roomBounds.center.y));
+        var roomFloor = RunRandomWalk(randomWalkParameters, roomCenter);
+
+        // Aplicar la restricción de los límites (offset) de la sala
+        foreach (var position in roomFloor)
         {
-            var roomBounds = roomsList[i];
-            var roomCenter = new Vector2Int(Mathf.RoundToInt(roomBounds.center.x), Mathf.RoundToInt(roomBounds.center.y));
-            var roomFloor = RunRandomWalk(randomWalkParameters, roomCenter);
-            foreach (var position in roomFloor)
+            if (position.x >= (roomBounds.xMin + offset) && position.x <= (roomBounds.xMax - offset) &&
+                position.y >= (roomBounds.yMin + offset) && position.y <= (roomBounds.yMax - offset))
             {
-                if (position.x >= (roomBounds.xMin + offset) && position.x <= (roomBounds.xMax - offset) && position.y >= (roomBounds.yMin - offset) 
-                    && position.y <= (roomBounds.yMax - offset))
-                {
-                    floor.Add(position);
-                }
+                floor.Add(position);
             }
         }
         return floor;
@@ -136,20 +207,17 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         return closest;
     }
 
-    private HashSet<Vector2Int> CreateSimpleRooms(List<BoundsInt> roomsList)
+    private HashSet<Vector2Int> CreateSingleSimpleRoom(BoundsInt roomBounds)
     {
-        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
-        foreach (var room in roomsList)
+        HashSet<Vector2Int> roomFloor = new HashSet<Vector2Int>();
+        for (int col = offset; col < roomBounds.size.x - offset; col++)
         {
-            for (int col = offset; col < room.size.x - offset ; col++)
+            for (int row = offset; row < roomBounds.size.y - offset; row++)
             {
-                for (int row = offset; row < room.size.y - offset; row++)
-                {
-                    Vector2Int position = (Vector2Int)room.min + new Vector2Int(col, row);
-                    floor.Add(position);
-                }
+                Vector2Int position = (Vector2Int)roomBounds.min + new Vector2Int(col, row);
+                roomFloor.Add(position);
             }
         }
-        return floor;
+        return roomFloor;
     }
 }
