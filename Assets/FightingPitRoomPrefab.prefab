@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6533779438707976542
+--- !u!1 &6523353720199165397
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,56 +8,61 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1430163940512581046}
-  - component: {fileID: 8353679237569697403}
-  - component: {fileID: 1647583435460804095}
+  - component: {fileID: 1947073412531559363}
+  - component: {fileID: 554486894282931418}
+  - component: {fileID: 5639963722867766295}
   m_Layer: 0
-  m_Name: PlayerRoomPrefab
+  m_Name: FightingPitRoomPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1430163940512581046
+--- !u!4 &1947073412531559363
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6533779438707976542}
+  m_GameObject: {fileID: 6523353720199165397}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.61365, y: 34.59741, z: -0.114405625}
+  m_LocalPosition: {x: -14.131936, y: 11.570985, z: -0.26427427}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8353679237569697403
+--- !u!114 &554486894282931418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6533779438707976542}
+  m_GameObject: {fileID: 6523353720199165397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0e021e8a1dcfa4ba64a540a0ca8b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabPlacer: {fileID: 5639963722867766295}
+  enemyPlacementData:
+  - minQuantity: 3
+    maxQuantity: 6
+    enemyPrefab: {fileID: 4497621185411460506, guid: d48a55cc9eab1114db2ece1d3ea89f76, type: 3}
+    enemySize: {x: 1, y: 1}
+  itemData: []
+  enemyDataListFix: []
+--- !u!114 &5639963722867766295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6523353720199165397}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 021aeb9cb5cb52e46821308b5631e1f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 6383699626309999431, guid: cbdb58647480132479f5816697ff08b9, type: 3}
---- !u!114 &1647583435460804095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6533779438707976542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8f6225b437e084e88a720a4630aca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 825061344083000801, guid: e7ca8708e0e4e7149a508ca88c9253b7, type: 3}
-  itemData: []
-  prefabPlacer: {fileID: 8353679237569697403}

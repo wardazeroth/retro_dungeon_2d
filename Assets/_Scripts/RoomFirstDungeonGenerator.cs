@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -21,7 +22,9 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField]
     RoomContentGenerator roomContentGenerator;
 
-    private DungeonData dungeonData = new DungeonData();
+    //private DungeonData dungeonData = new DungeonData();
+
+    private DungeonData dungeonData;
     private Dictionary<Vector2Int, HashSet<Vector2Int>> roomsDictionary = new Dictionary<Vector2Int, HashSet<Vector2Int>>();
 
     //    // Método estándar para iniciar la lógica cuando se pulsa Play en Unity
@@ -41,6 +44,8 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     {
         // Esto asegura que la secuencia de números aleatorios sea diferente en cada ejecución.
         UnityEngine.Random.InitState((int)System.DateTime.Now.Ticks);
+
+        dungeonData = new DungeonData();
 
         roomsDictionary.Clear();
         CreateRooms();
@@ -99,7 +104,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
         }
 
-        HashSet<Vector2Int> floor = roomsDictionary.Values.SelectMany(x => x).ToHashSet();
+        HashSet<Vector2Int> floor = System.Linq.Enumerable.ToHashSet(roomsDictionary.Values.SelectMany(x => x));
         List<Vector2Int> roomCenters = roomsDictionary.Keys.ToList();
 
         HashSet<Vector2Int> initialCorridors = ConnectRooms(roomCenters);
@@ -219,5 +224,55 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             }
         }
         return roomFloor;
+    }
+
+    // RoomFirstDungeonGenerator.cs
+
+    // Asume que tienes esta referencia: [SerializeField] private RoomContentGenerator roomContentGenerator;
+
+    protected override void ClearPreviousGeneration()
+    {
+        // 1. Verificar la Referencia al Contenedor Padre
+        // El 'ItemParent' es el objeto que creamos (_DungeonContent) que contiene todos los enemigos/ítems.
+        if (roomContentGenerator == null || roomContentGenerator.ItemParent == null)
+        {
+            Debug.LogError("FATAL ERROR: El contenedor de contenido (Item Parent) no está asignado en RoomContentGenerator.");
+
+            // 🚨 Fallback para el Jugador: Intentamos destruir el jugador por su nombre de clon.
+            GameObject oldPlayer = GameObject.Find("Player_asset(Clone)");
+            if (oldPlayer != null)
+            {
+                DestroyImmediate(oldPlayer);
+                Debug.Log("Limpieza de jugador anterior completada por nombre.");
+            }
+            return;
+        }
+
+        Transform contentParent = roomContentGenerator.ItemParent;
+
+        // 2. ELIMINAR CONTENIDO DEL CONTENEDOR (Enemigos e Ítems Viejos)
+
+        // Iterar de atrás hacia adelante es VITAL cuando se usa DestroyImmediate en un bucle, 
+        // ya que evita que los índices de los hijos cambien a medida que se destruyen los objetos.
+        int childCount = contentParent.childCount;
+
+        for (int i = childCount - 1; i >= 0; i--)
+        {
+            // Obtener el hijo en el índice actual
+            GameObject childToDestroy = contentParent.GetChild(i).gameObject;
+
+            // 🛑 Usar DestroyImmediate: Elimina el objeto AL INSTANTE, liberando la memoria del Editor.
+            DestroyImmediate(childToDestroy);
+        }
+
+        // 3. ELIMINAR JUGADOR VIEJO (Si por alguna razón no fue hijo del contenedor)
+        // Hacemos una búsqueda de respaldo para asegurar que el clon del jugador no se quede.
+        GameObject backupPlayer = GameObject.Find("Player_asset(Clone)");
+        if (backupPlayer != null)
+        {
+            DestroyImmediate(backupPlayer);
+        }
+
+        Debug.Log($"Limpieza de mazmorra anterior completada. {childCount} objetos eliminados del contenedor.");
     }
 }

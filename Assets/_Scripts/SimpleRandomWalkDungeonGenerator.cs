@@ -34,4 +34,8 @@ public class SimpleRandomWalkDungeonGenerator : AbstractDungeonGenerator
         }
         return floorPositions;
     }
+    protected override void ClearPreviousGeneration()
+    {
+
+    }
 };

@@ -1,43 +1,62 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerRoom : RoomGenerator
 {
-    public GameObject player; //prefab del jugador
+    public GameObject player;
+
+    public List<ItemPlacementData> itemData;
 
     [SerializeField]
     private PrefabPlacer prefabPlacer;
 
-    
     public override List<GameObject> ProcessRoom(
         Vector2Int roomCenter,
         HashSet<Vector2Int> roomFloor,
         HashSet<Vector2Int> roomFloorNoCorridors)
     {
-        List<GameObject> placedObjects = new List<GameObject>();
 
-        //Determinar posición y Spawn
+        ItemPlacementHelper itemPlacementHelper =
+            new ItemPlacementHelper(roomFloor, roomFloorNoCorridors);
+
+        List<GameObject> placedObjects =
+            prefabPlacer.PlaceAllItems(itemData, itemPlacementHelper);
+
         Vector2Int playerSpawnPoint = roomCenter;
 
-        // CONSTRUCCIÓN DETALLADA DE LA INSTANCIACIÓN:
+        GameObject playerObject
+            = prefabPlacer.CreateObject(player, playerSpawnPoint + new Vector2(0.5f, 0.5f));
 
-        // a) Convertir de coordenadas de cuadrícula (Vector2Int) a coordenadas del mundo (Vector3).
-        // La posición del centro de la celda de la cuadrícula es (X, Y).
-        Vector3 worldPosition = new Vector3(
-            playerSpawnPoint.x + 0.5f, // X de la celda + 0.5f (centro)
-            playerSpawnPoint.y + 0.5f, // Y de la celda + 0.5f (centro)
-            0f                         // Z=0 para 2D
-        );
-        // b) Invocar la función de instanciación del PrefabPlacer
-        GameObject playerObject = prefabPlacer.CreateObject(
-             player,
-             worldPosition
-        );
-        // c) Agregar el objeto creado a la lista de objetos de la sala
         placedObjects.Add(playerObject);
 
         return placedObjects;
-
     }
 }
+
+public abstract class PlacementData
+{
+    [Min(0)]
+    public int minQuantity = 0;
+    [Min(0)]
+    [Tooltip("Max is inclusive")]
+    public int maxQuantity = 0;
+    public int Quantity
+        => UnityEngine.Random.Range(minQuantity, maxQuantity + 1);
+}
+
+[Serializable]
+public class ItemPlacementData : PlacementData
+{
+    public ItemData itemData;
+}
+
+[Serializable]
+public class EnemyPlacementData : PlacementData
+{
+    public GameObject enemyPrefab;
+    public Vector2Int enemySize = Vector2Int.one;
+}
+

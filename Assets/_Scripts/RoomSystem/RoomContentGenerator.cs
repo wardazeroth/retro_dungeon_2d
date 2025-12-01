@@ -21,6 +21,9 @@ public class RoomContentGenerator : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera cinemachineCamera;
 
+    [Tooltip("Contenedor para todos los objetos spawneados (enemigos/jugador)")]
+    public Transform ItemParent;
+
     public UnityEvent RegenerateDungeon;
 
     private void Update()
