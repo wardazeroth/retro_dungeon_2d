@@ -13,16 +13,12 @@ public class RoomContentGenerator : MonoBehaviour
     List<GameObject> spawnedObjects = new List<GameObject>();
 
     [SerializeField]
-    //private GraphTest graphTest;
-
+    private GraphTest graphTest;
 
     public Transform itemParent;
 
     [SerializeField]
     private CinemachineVirtualCamera cinemachineCamera;
-
-    [Tooltip("Contenedor para todos los objetos spawneados (enemigos/jugador)")]
-    public Transform ItemParent;
 
     public UnityEvent RegenerateDungeon;
 
@@ -94,7 +90,12 @@ public class RoomContentGenerator : MonoBehaviour
         // 🌟 AÑADE ESTA LÍNEA DE DIAGNÓSTICO:
         Debug.Log($"[SPAWN DIAGNÓSTICO] Salas totales: {roomCount}. Generando jugador en la posición: {playerSpawnPoint}");
 
-        //graphTest.RunDijkstraAlgorithm(playerSpawnPoint, dungeonData.floorPositions);
+        if (graphTest != null)
+        {
+            graphTest.RunDjiskstraAlgorithm(playerSpawnPoint, dungeonData.floorPositions);
+
+        }
+
 
         Vector2Int roomIndex = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
 
@@ -152,18 +153,50 @@ public class RoomContentGenerator : MonoBehaviour
         cinemachineCamera.Follow = playerTransform;
     }
 
+    // RoomContentGenerator.cs
+
     private void SelectEnemySpawnPoints(DungeonData dungeonData)
     {
+        // Verificar si las herramientas de IA están disponibles en este controlador
+        // El ContextSolver y GraphTest deben ser componentes de este GameObject.
+        ContextSolver solver = GetComponent<ContextSolver>();
+        GraphTest graphRunner = GetComponent<GraphTest>();
+
+        // 1. Iterar sobre las salas restantes (las que no son la sala del jugador)
         foreach (KeyValuePair<Vector2Int, HashSet<Vector2Int>> roomData in dungeonData.roomsDictionary)
         {
-            spawnedObjects.AddRange(
-                defaultRoom.ProcessRoom(
-                    roomData.Key,
-                    roomData.Value,
-                    dungeonData.GetRoomFloorWithoutCorridors(roomData.Key)
-                    )
+            // 2. Generar Enemigos e Ítems para esta sala
+            // La lista 'placedContent' está declarada dentro del alcance del foreach.
+            List<GameObject> placedContent = defaultRoom.ProcessRoom(
+                roomData.Key, // roomCenter
+                roomData.Value, // roomFloor
+                dungeonData.GetRoomFloorWithoutCorridors(roomData.Key) // roomFloorNoCorridors
             );
 
+            // 3. 🌟 PASO CRUCIAL: INYECCIÓN DE REFERENCIAS DE IA 🌟
+
+            foreach (GameObject content in placedContent)
+            {
+                EnemyAI enemyAI = content.GetComponent<EnemyAI>();
+
+                // Solo inyectar si el objeto es un enemigo y las herramientas existen
+                if (enemyAI != null)
+                {
+                    //// La referencia debe ser pública en EnemyAI.cs para esta inyección (como corregimos)
+                    //if (graphRunner != null)
+                    //{
+                    //    enemyAI.graphTest = graphRunner; // ⬅️ Inyecta el componente GraphTest
+                    //}
+
+                    //if (solver != null)
+                    //{
+                    //    enemyAI.movementDirectionSolver = solver; // ⬅️ Inyecta el Fallback ContextSolver
+                    //}
+                }
+            }
+
+            // 4. Añadir el contenido modificado a la lista global para la limpieza
+            spawnedObjects.AddRange(placedContent);
         }
     }
 

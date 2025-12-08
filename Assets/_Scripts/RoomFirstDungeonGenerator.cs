@@ -234,7 +234,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     {
         // 1. Verificar la Referencia al Contenedor Padre
         // El 'ItemParent' es el objeto que creamos (_DungeonContent) que contiene todos los enemigos/ítems.
-        if (roomContentGenerator == null || roomContentGenerator.ItemParent == null)
+        if (roomContentGenerator == null || roomContentGenerator.itemParent == null)
         {
             Debug.LogError("FATAL ERROR: El contenedor de contenido (Item Parent) no está asignado en RoomContentGenerator.");
 
@@ -248,7 +248,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             return;
         }
 
-        Transform contentParent = roomContentGenerator.ItemParent;
+        Transform contentParent = roomContentGenerator.itemParent;
 
         // 2. ELIMINAR CONTENIDO DEL CONTENEDOR (Enemigos e Ítems Viejos)
 
