@@ -19,7 +19,7 @@ public class Graph
 
     //Almacenamos todas las posiciones de suelo de la sala
     List<Vector2Int> graph;
-
+ 
     public Graph(IEnumerable<Vector2Int> vertices)
     {
         graph = new List<Vector2Int>(vertices);
