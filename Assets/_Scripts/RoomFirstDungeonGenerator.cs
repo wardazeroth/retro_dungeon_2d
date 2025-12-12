@@ -42,6 +42,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     //}
     protected override void RunProceduralGeneration()
     {
+        //ClearPreviousGeneration();
         // Esto asegura que la secuencia de números aleatorios sea diferente en cada ejecución.
         UnityEngine.Random.InitState((int)System.DateTime.Now.Ticks);
 
@@ -112,6 +113,28 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
         floor.UnionWith(wideCorridors);
 
+        dungeonData.tileToRoomMap = new Dictionary<Vector2Int, Vector2Int>();
+
+        foreach (var roomEntry in roomsDictionary)
+        {
+            Vector2Int roomIndex = roomEntry.Key;
+            HashSet<Vector2Int> roomTiles = roomEntry.Value;
+
+            foreach (Vector2Int tilePosition in roomTiles)
+            {
+                //Mapear la posición de la baldosa a la clave de su sala (roomCenter)
+                dungeonData.tileToRoomMap.Add(tilePosition, roomIndex);
+            }
+        }
+
+        foreach (Vector2Int corridorPosition in wideCorridors)
+        {
+            if (!dungeonData.tileToRoomMap.ContainsKey(corridorPosition))
+            {
+                // dungeonData.tileToRoomMap.Add(corridorPosition, Vector2Int.zero);
+            }
+        }
+
         // LLenar el objeto DungeonData
         dungeonData.roomsDictionary = roomsDictionary;
         dungeonData.floorPositions = floor;
@@ -126,7 +149,6 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             // Pasamos el objeto DungeonData COMPLETO al spawner.
             roomContentGenerator.GenerateRoomContent(dungeonData);
         }
-
     }
 
     private HashSet<Vector2Int> CreateSingleRandomRoom(BoundsInt roomBounds)
@@ -230,49 +252,45 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
     // Asume que tienes esta referencia: [SerializeField] private RoomContentGenerator roomContentGenerator;
 
-    protected override void ClearPreviousGeneration()
-    {
-        // 1. Verificar la Referencia al Contenedor Padre
-        // El 'ItemParent' es el objeto que creamos (_DungeonContent) que contiene todos los enemigos/ítems.
-        if (roomContentGenerator == null || roomContentGenerator.itemParent == null)
-        {
-            Debug.LogError("FATAL ERROR: El contenedor de contenido (Item Parent) no está asignado en RoomContentGenerator.");
+    //protected override void ClearPreviousGeneration()
+    //{
+    //    // 1. Verificar la Referencia al Contenedor Padre
+    //    // El 'ItemParent' es el objeto que creamos (_DungeonContent) que contiene todos los enemigos/ítems.
+    //    if (roomContentGenerator == null || roomContentGenerator.itemParent == null)
+    //    {
+    //        Debug.LogError("FATAL ERROR: El contenedor de contenido (Item Parent) no está asignado en RoomContentGenerator.");
 
-            // 🚨 Fallback para el Jugador: Intentamos destruir el jugador por su nombre de clon.
-            GameObject oldPlayer = GameObject.Find("Player_asset(Clone)");
-            if (oldPlayer != null)
-            {
-                DestroyImmediate(oldPlayer);
-                Debug.Log("Limpieza de jugador anterior completada por nombre.");
-            }
-            return;
-        }
+    //        // 🚨 Fallback para el Jugador: Intentamos destruir el jugador por su nombre de clon.
+    //        GameObject oldPlayer = GameObject.Find("Player_asset(Clone)");
+    //        if (oldPlayer != null)
+    //        {
+    //            DestroyImmediate(oldPlayer);
+    //            Debug.Log("Limpieza de jugador anterior completada por nombre.");
+    //        }
+    //        return;
+    //    }
 
-        Transform contentParent = roomContentGenerator.itemParent;
+    //    Transform contentParent = roomContentGenerator.itemParent;
 
-        // 2. ELIMINAR CONTENIDO DEL CONTENEDOR (Enemigos e Ítems Viejos)
+    //    // 2. ELIMINAR CONTENIDO DEL CONTENEDOR (Enemigos e Ítems Viejos)
 
-        // Iterar de atrás hacia adelante es VITAL cuando se usa DestroyImmediate en un bucle, 
-        // ya que evita que los índices de los hijos cambien a medida que se destruyen los objetos.
-        int childCount = contentParent.childCount;
+    //    // Iterar de atrás hacia adelante es VITAL cuando se usa DestroyImmediate en un bucle, 
+    //    // ya que evita que los índices de los hijos cambien a medida que se destruyen los objetos.
+    //    while (contentParent.childCount > 0) // Iterar con while es más seguro que el for decremental
+    //    {
+    //        GameObject childToDestroy = contentParent.GetChild(0).gameObject;
+    //        childToDestroy.hideFlags = HideFlags.HideAndDontSave;
+    //        DestroyImmediate(childToDestroy);
+    //    }
 
-        for (int i = childCount - 1; i >= 0; i--)
-        {
-            // Obtener el hijo en el índice actual
-            GameObject childToDestroy = contentParent.GetChild(i).gameObject;
+    //    // 3. ELIMINAR JUGADOR VIEJO (Si por alguna razón no fue hijo del contenedor)
+    //    // Hacemos una búsqueda de respaldo para asegurar que el clon del jugador no se quede.
+    //    GameObject backupPlayer = GameObject.Find("Player_asset(Clone)");
+    //    if (backupPlayer != null)
+    //    {
+    //        DestroyImmediate(backupPlayer);
+    //    }
 
-            // 🛑 Usar DestroyImmediate: Elimina el objeto AL INSTANTE, liberando la memoria del Editor.
-            DestroyImmediate(childToDestroy);
-        }
-
-        // 3. ELIMINAR JUGADOR VIEJO (Si por alguna razón no fue hijo del contenedor)
-        // Hacemos una búsqueda de respaldo para asegurar que el clon del jugador no se quede.
-        GameObject backupPlayer = GameObject.Find("Player_asset(Clone)");
-        if (backupPlayer != null)
-        {
-            DestroyImmediate(backupPlayer);
-        }
-
-        Debug.Log($"Limpieza de mazmorra anterior completada. {childCount} objetos eliminados del contenedor.");
-    }
+    //    Debug.Log($"Limpieza de mazmorra anterior completada. Objetos eliminados del contenedor.");
+    //}
 }
