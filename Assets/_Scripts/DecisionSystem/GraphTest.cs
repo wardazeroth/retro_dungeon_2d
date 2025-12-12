@@ -21,7 +21,7 @@ public class GraphTest : MonoBehaviour
 
         //Crear el Graph que contiene todas las baldosas transitables
         graph = new Graph(floorPositions);
-
+        
         //Ejecutar el algoritmo BFS/Dijsktra y guardar el mapa de distancias
         dijkstraResult = DijkstraAlgorithm.Dijkstra(graph, playerPosition);
 
@@ -55,20 +55,6 @@ public class GraphTest : MonoBehaviour
             }
         }
         return bestNeighbour;
-    }
-
-    public int GetDijsktraCost(Vector2Int position)
-    {
-        if (graphReady && dijkstraResult != null && dijkstraResult.ContainsKey(position))
-        {
-            return dijkstraResult[position];
-        }
-        return highestValue + 1;
-    }
-
-    public int GetHighestDijkstraCost()
-    {
-        return highestValue;
     }
     
     //Debugging color mapa

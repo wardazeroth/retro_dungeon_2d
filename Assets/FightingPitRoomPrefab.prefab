@@ -49,9 +49,10 @@ MonoBehaviour:
   enemyPlacementData:
   - minQuantity: 3
     maxQuantity: 6
-    enemyPrefab: {fileID: 4268454981252747614, guid: d48a55cc9eab1114db2ece1d3ea89f76, type: 3}
+    enemyPrefab: {fileID: 4497621185411460506, guid: d48a55cc9eab1114db2ece1d3ea89f76, type: 3}
     enemySize: {x: 1, y: 1}
   itemData: []
+  enemyDataListFix: []
 --- !u!114 &5639963722867766295
 MonoBehaviour:
   m_ObjectHideFlags: 0

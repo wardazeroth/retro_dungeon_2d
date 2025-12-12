@@ -17,7 +17,7 @@ public class ItemPlacementHelper
     {
         //Creamos el grafo usando TODO el suelo (incluiyendo pasillos) para buscar vecinos en general
         Graph graph = new Graph(roomFloor);
-        this.roomFloorNoCorridor = roomFloorNoCorridor; 
+        this.roomFloorNoCorridor = roomFloorNoCorridor;
 
         //Iteramos sobre el suelo de la sala excluyendo corredores (para el spawning)
         foreach (var position in roomFloorNoCorridor)
