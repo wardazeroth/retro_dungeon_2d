@@ -389,23 +389,84 @@ public class RoomContentGenerator : MonoBehaviour
 
                     if (spawnPosition != Vector2Int.zero)
                     {
-                        //Instanciar el cofre
                         GameObject chestInstance = Instantiate(chestPrefab, new Vector3(spawnPosition.x + 0.5f, spawnPosition.y + 0.5f, 0),
-                                               Quaternion.identity);
+                                   Quaternion.identity);
                         spawnedObjects.Add(chestInstance);
 
-                        //2. Obtener el script e inicializarlo con la llave
-                        Chest chestComponent = chestInstance.GetComponent<Chest>();
-                        if (chestComponent != null && keyPrefab != null)
-                        {
-                            //Inyección de la llave
-                            chestComponent.InitializeContent(keyPrefab);
-                        }
-                        else if (chestComponent == null)
-                        {
-                            Debug.Log($"Falta el script Chest.cs en el Prefab del Cofre");
-                        }
+                        //if (chestInstance.TryGetComponent<Chest>(out Chest chestComponent))
+                        //{
+                        //    if (keyPrefab != null)
+                        //    {
+                        //        chestComponent.InitializeContent(keyPrefab);
+                        //        Debug.Log($"[INYECCIÓN] Llave inyectada en cofre.");
+                        //    }
+                        //    else
+                        //    {
+                        //        Debug.LogError("La referencia keyPrefab es nula en el Inspector.");
+                        //    }
+                        //}
+                        //else
+                        //{
+                        //    Debug.LogError($"[FALLO CRÍTICO] La instancia del Cofre ({chestInstance.name}) NO tiene el script Chest.cs adjunto.");
+                        //}
                     }
+                    //if (keyPrefab == null)
+                    //{
+                    //    Debug.LogError("FATAL: Key Prefab es nulo en RoomContentGenerator, no se puede inyectar la llave.");
+                    //    // Si esto es nulo, la reasignación en el Inspector falló.
+                    //}
+
+                    //Vector2Int spawnPosition = GetValidFloorPosition(roomIndex, dungeonData.GetRoomFloorWithoutCorridors(roomIndex));
+
+                    //if (spawnPosition != Vector2Int.zero)
+                    //{
+                    //    //Instanciar el cofre
+                    //    GameObject chestInstance = Instantiate(chestPrefab, new Vector3(spawnPosition.x + 0.5f, spawnPosition.y + 0.5f, 0),
+                    //                           Quaternion.identity);
+                    //    spawnedObjects.Add(chestInstance);
+
+                    //    if (chestInstance.TryGetComponent<Chest>(out Chest chestComponent))
+                    //    {
+                    //        GameObject keyToInject = keyPrefab;
+
+                    //        // 🛑 LÓGICA DE RECUPERACIÓN DE REFERENCIA (Si el Inspector falla) 🛑
+                    //        if (keyToInject == null)
+                    //        {
+                    //            // Si la referencia serializada (keyPrefab) es nula, FORZAMOS la recuperación
+                    //            // Asume que tu prefab se llama "Key_Prefab" y está en la carpeta Resources/Prefabs
+                    //            // (O crea una carpeta Resources en tu proyecto y pon el prefab ahí para esta prueba)
+                    //            Debug.LogWarning("Key Prefab es nulo. Intentando cargar desde Resources.");
+                    //            keyToInject = Resources.Load<GameObject>("Key_Prefab");
+                    //        }
+                    //        // 🛑 FIN RECUPERACIÓN 🛑
+
+                    //        if (keyToInject != null)
+                    //        {
+                    //            chestComponent.InitializeContent(keyToInject);
+                    //            Debug.Log($"[INYECCIÓN] Llave inyectada en cofre.");
+                    //        }
+                    //        else
+                    //        {
+                    //            Debug.LogError("¡ERROR FATAL DE ASSET! No se pudo inyectar la llave. Revisa la asignación de Key Prefab.");
+                    //        }
+                    //    }
+                    //    else
+                    //    {
+                    //        Debug.LogError($"[FALLO CRÍTICO] La instancia del Cofre ({chestInstance.name}) NO tiene el script Chest.cs adjunto.");
+                    //    }
+
+                    //    ////2. Obtener el script e inicializarlo con la llave
+                    //    //Chest chestComponent = chestInstance.GetComponent<Chest>();
+                    //    //if (chestComponent != null && keyPrefab != null)
+                    //    //{
+                    //    //    //Inyección de la llave
+                    //    //    chestComponent.InitializeContent(keyPrefab);
+                    //    //}
+                    //    //else if (chestComponent == null)
+                    //    //{
+                    //    //    Debug.Log($"Falta el script Chest.cs en el Prefab del Cofre");
+                    //    //}
+                    //}
                 }
             }
 

@@ -6,8 +6,12 @@ using UnityEngine.Rendering;
 
 public class Chest : MonoBehaviour
 {
-    //Referencia al objeto que contiene la llave unica
-    private GameObject contentPrefab;
+    ////Referencia al objeto que contiene la llave unica
+    //private GameObject contentPrefab;
+
+    [Header("Contenido de la llave")]
+    [SerializeField]
+    private GameObject keyContentPrefab;
 
     //Estado para evitar reapertura
     private bool isOpen = false;
@@ -23,12 +27,12 @@ public class Chest : MonoBehaviour
     private float interactionRange = 2f;
 
     //método llamado por RoomContentGenerator al spawnear el cofre único
-    public void InitializeContent(GameObject content)
-    {
-        contentPrefab = content;
-    }
+    //public void InitializeContent(GameObject content)
+    //{
+    //    this.contentPrefab = content;
+    //}
 
-    //Unity llama a este método cuando se hace click en el collider 2d
+    ////Unity llama a este método cuando se hace click en el collider 2d
     private void OnMouseDown()
     {
         if (isOpen) return;
@@ -44,16 +48,16 @@ public class Chest : MonoBehaviour
             OpenChest();
         }
     }
-    
+
     private void OpenChest()
     {
         isOpen = true;
 
         //1. Cambiar la apariencia
-        if (contentPrefab != null)
+        if (keyContentPrefab != null)
         {
             //Instancia la llave encima del cofre
-            Instantiate(contentPrefab, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+            Instantiate(keyContentPrefab, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
             Debug.Log("Cofre abierto. La llave ha aprecido");
         }
         else
@@ -63,13 +67,5 @@ public class Chest : MonoBehaviour
         //3. Desactivar el COllider 2D (para que no se pueda volver a clicar)
         Collider2D col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
-    }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

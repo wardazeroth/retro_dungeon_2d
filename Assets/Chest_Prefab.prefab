@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6152164001927177944}
   - component: {fileID: 2250665534073540173}
   - component: {fileID: 2314028773610131541}
-  - component: {fileID: -4246497208500634871}
+  - component: {fileID: 5234179574880129673}
   m_Layer: 0
   m_Name: Chest_Prefab
   m_TagString: Untagged
@@ -159,7 +159,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.8}
   m_EdgeRadius: 0
---- !u!114 &-4246497208500634871
+--- !u!114 &5234179574880129673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0682ed61e067404faa7d75a47d3b6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyContentPrefab: {fileID: 6976996851623686106, guid: f7e666b9453f39a4ea80a80dd189dcdc, type: 3}
   spriteRenderer: {fileID: 0}
   openSprite: {fileID: 0}
   interactionRange: 2

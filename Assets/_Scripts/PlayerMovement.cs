@@ -35,10 +35,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log($"Input Detectado: {movementInput}");
         }
-        // ----------------------------
-        // 🌟 AÑADE ESTO TEMPORALMENTE 🌟
-        Debug.Log($"Posición Rigidbody: {rb.position}");
-        // ----------------------------
+        //Debug.Log($"Posición Rigidbody: {rb.position}");
     }
 
     void FixedUpdate()

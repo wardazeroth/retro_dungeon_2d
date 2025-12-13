@@ -119,7 +119,7 @@ public class EnemyAI : MonoBehaviour
         else
         {
             //FASE 2: PERSECUCIÓN
-
+                
             ////Lógica de Pathfinding por Gráfico
             if (graphTest != null)
             {
@@ -129,8 +129,8 @@ public class EnemyAI : MonoBehaviour
                 //Consultar el mapa de Djikstra: ¿Cuál es el siguiente paso más cercano al jugador?
                 Vector2Int nextGridStep = graphTest.GetDirectionToLowestCostNeighbour(currentGridPosition);
 
-                // 🛑 AÑADE ESTE DEBUG.LOG AQUÍ 🛑
-                Debug.Log($"[DIJKSTRA DEBUG] Enemigo: {gameObject.name}. Actual: {currentGridPosition}. Siguiente: {nextGridStep}. Target: {aiData.currentTarget.position}");
+                //// 🛑 AÑADE ESTE DEBUG.LOG AQUÍ 🛑
+                //Debug.Log($"[DIJKSTRA DEBUG] Enemigo: {gameObject.name}. Actual: {currentGridPosition}. Siguiente: {nextGridStep}. Target: {aiData.currentTarget.position}");
                 //SI la posición de la cuadrícula actual es diferente al mejor vecino
                 if (nextGridStep != currentGridPosition)
                 {
