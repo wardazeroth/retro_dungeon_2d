@@ -15,11 +15,13 @@ public class RoomContentGenerator : MonoBehaviour
     List<GameObject> spawnedObjects = new List<GameObject>();
 
     [SerializeField]
-    private GraphTest graphTest;
+    public GraphTest graphTest;
 
     public Transform itemParent;
 
     private Vector2Int playerRoomIndexKey;
+
+    public HashSet<Vector2Int> CurrentFloorPositions { get; private set; }
 
     [SerializeField]
     private CinemachineVirtualCamera cinemachineCamera;
@@ -163,50 +165,14 @@ public class RoomContentGenerator : MonoBehaviour
     }
     public void GenerateRoomContent(DungeonData dungeonData)
     {
-        foreach (GameObject item in spawnedObjects.ToList())
-        {
-            if (item != null)
-            {
-                if (itemParent != null && !Application.isPlaying)
-                {
-                    // Limpiar inmediatamente todos los hijos del contenedor en Modo Editor
-                    // Esto elimina cualquier objeto acumulado de la sesión anterior.
-                    int childCount = itemParent.childCount;
-                    for (int i = childCount - 1; i >= 0; i--)
-                    {
-                        Transform child = itemParent.GetChild(i);
-                        if (child != null && child.gameObject != null)
-                        {
-                            // Desparentar primero para evitar problemas con referencias de Prefab
-                            child.SetParent(null);
-                            DestroyImmediate(child.gameObject);
-                        }
-                    }
-                }
-
-                // 🌟 ¡SOLUCIÓN! Usar DestroyImmediate en el Editor, Destroy en el juego.
-                if (Application.isPlaying)
-                {
-                    Destroy(item); // Modo Juego
-                }
-                else
-                {
-                    if (item.transform.parent != null)
-                    {
-                        item.transform.SetParent(null);
-                    }
-
-                    DestroyImmediate(item); // Modo Editor (para evitar acumulación)
-                }
-            }
-
-        }
-        spawnedObjects.Clear();
+        DestroyAllSpawnedObjects();
 
         SelectPlayerSpawnPoint(dungeonData);
         ClassifyRooms(dungeonData);
         SelectEnemySpawnPoints(dungeonData);
         SelectItemSpawnPoints(dungeonData);
+
+        CurrentFloorPositions = dungeonData.floorPositions;
 
         foreach (GameObject item in spawnedObjects)
         {
@@ -230,10 +196,38 @@ public class RoomContentGenerator : MonoBehaviour
         // 🌟 NUEVO: OBTENER LA POSICIÓN SEGURA MÁS CERCANA AL CENTRO
         Vector2Int roomCenter = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
 
-        Vector2Int playerSpawnPoint = GetValidFloorPosition(roomCenter, dungeonData.floorPositions);
+        //Vector2Int playerSpawnPoint = GetValidFloorPosition(roomCenter, dungeonData.floorPositions);
 
         Vector2Int roomIndexToRemove = dungeonData.roomsDictionary.Keys.ElementAt(randomRoomIndex);
         playerRoomIndexKey = roomIndexToRemove;
+
+        Vector2Int playerSpawnPoint;
+
+        // FILTRADO PARA EL MARGEN DE SEGURIDAD (CÓDIGO QUE NECESITAS INSERTAR)
+        // ---------------------------------------------------------------------
+        // Obtener todas las baldosas de la sala (sin corredores)
+        HashSet<Vector2Int> safeRoomTiles = dungeonData.GetRoomFloorWithoutCorridors(roomIndexToRemove);
+
+        // Creamos un subconjunto de baldosas que NO están en el borde (tienen vecinos por los 4 lados)
+        var innerSafeTiles = safeRoomTiles
+            .Where(p =>
+                safeRoomTiles.Contains(p + Vector2Int.up) &&
+                safeRoomTiles.Contains(p + Vector2Int.down) &&
+                safeRoomTiles.Contains(p + Vector2Int.left) &&
+                safeRoomTiles.Contains(p + Vector2Int.right)
+            ).ToList();
+
+        if (innerSafeTiles.Count > 0)
+        {
+            // Elegir un punto seguro entre las baldosas interiores
+            int innerIndex = UnityEngine.Random.Range(0, innerSafeTiles.Count);
+            playerSpawnPoint = innerSafeTiles[innerIndex];
+        }
+        else
+        {
+            // Usar la lógica de GetValidFloorPosition si no hay baldosas interiores (sala muy pequeña)
+            playerSpawnPoint = GetValidFloorPosition(roomCenter, dungeonData.floorPositions);
+        }
         // Si GetValidFloorPosition devuelve Vector2Int.zero, algo salió muy mal.
         if (playerSpawnPoint == Vector2Int.zero)
         {
@@ -393,80 +387,7 @@ public class RoomContentGenerator : MonoBehaviour
                                    Quaternion.identity);
                         spawnedObjects.Add(chestInstance);
 
-                        //if (chestInstance.TryGetComponent<Chest>(out Chest chestComponent))
-                        //{
-                        //    if (keyPrefab != null)
-                        //    {
-                        //        chestComponent.InitializeContent(keyPrefab);
-                        //        Debug.Log($"[INYECCIÓN] Llave inyectada en cofre.");
-                        //    }
-                        //    else
-                        //    {
-                        //        Debug.LogError("La referencia keyPrefab es nula en el Inspector.");
-                        //    }
-                        //}
-                        //else
-                        //{
-                        //    Debug.LogError($"[FALLO CRÍTICO] La instancia del Cofre ({chestInstance.name}) NO tiene el script Chest.cs adjunto.");
-                        //}
                     }
-                    //if (keyPrefab == null)
-                    //{
-                    //    Debug.LogError("FATAL: Key Prefab es nulo en RoomContentGenerator, no se puede inyectar la llave.");
-                    //    // Si esto es nulo, la reasignación en el Inspector falló.
-                    //}
-
-                    //Vector2Int spawnPosition = GetValidFloorPosition(roomIndex, dungeonData.GetRoomFloorWithoutCorridors(roomIndex));
-
-                    //if (spawnPosition != Vector2Int.zero)
-                    //{
-                    //    //Instanciar el cofre
-                    //    GameObject chestInstance = Instantiate(chestPrefab, new Vector3(spawnPosition.x + 0.5f, spawnPosition.y + 0.5f, 0),
-                    //                           Quaternion.identity);
-                    //    spawnedObjects.Add(chestInstance);
-
-                    //    if (chestInstance.TryGetComponent<Chest>(out Chest chestComponent))
-                    //    {
-                    //        GameObject keyToInject = keyPrefab;
-
-                    //        // 🛑 LÓGICA DE RECUPERACIÓN DE REFERENCIA (Si el Inspector falla) 🛑
-                    //        if (keyToInject == null)
-                    //        {
-                    //            // Si la referencia serializada (keyPrefab) es nula, FORZAMOS la recuperación
-                    //            // Asume que tu prefab se llama "Key_Prefab" y está en la carpeta Resources/Prefabs
-                    //            // (O crea una carpeta Resources en tu proyecto y pon el prefab ahí para esta prueba)
-                    //            Debug.LogWarning("Key Prefab es nulo. Intentando cargar desde Resources.");
-                    //            keyToInject = Resources.Load<GameObject>("Key_Prefab");
-                    //        }
-                    //        // 🛑 FIN RECUPERACIÓN 🛑
-
-                    //        if (keyToInject != null)
-                    //        {
-                    //            chestComponent.InitializeContent(keyToInject);
-                    //            Debug.Log($"[INYECCIÓN] Llave inyectada en cofre.");
-                    //        }
-                    //        else
-                    //        {
-                    //            Debug.LogError("¡ERROR FATAL DE ASSET! No se pudo inyectar la llave. Revisa la asignación de Key Prefab.");
-                    //        }
-                    //    }
-                    //    else
-                    //    {
-                    //        Debug.LogError($"[FALLO CRÍTICO] La instancia del Cofre ({chestInstance.name}) NO tiene el script Chest.cs adjunto.");
-                    //    }
-
-                    //    ////2. Obtener el script e inicializarlo con la llave
-                    //    //Chest chestComponent = chestInstance.GetComponent<Chest>();
-                    //    //if (chestComponent != null && keyPrefab != null)
-                    //    //{
-                    //    //    //Inyección de la llave
-                    //    //    chestComponent.InitializeContent(keyPrefab);
-                    //    //}
-                    //    //else if (chestComponent == null)
-                    //    //{
-                    //    //    Debug.Log($"Falta el script Chest.cs en el Prefab del Cofre");
-                    //    //}
-                    //}
                 }
             }
 
@@ -503,6 +424,95 @@ public class RoomContentGenerator : MonoBehaviour
             // 4. Añadir el contenido modificado a la lista global para la limpieza
             spawnedObjects.AddRange(placedContent);
         }
+    }
+
+public void DestroyAllSpawnedObjects()
+{
+        Debug.Log("[LIMPIEZA INICIAL] Ejecutando limpieza agresiva...");
+
+        // 🛑 1. LIMPIEZA DEL JUGADOR (BUSQUEDA ROBUSTA) 🛑
+        // Buscamos cualquier objeto que empiece con "Player_asset" (original y clon)
+        GameObject[] players = GameObject.FindObjectsOfType<GameObject>()
+            .Where(obj => obj.name.Contains("Player_asset")).ToArray();
+
+        foreach (GameObject player in players)
+        {
+            DestroyImmediate(player);
+            Debug.Log("[LIMPIEZA] Jugador anterior destruido (por Find).");
+        }
+
+        // 🛑 2. MÉTODO ROBUSTO: Destruir a través del Contenedor Padre 🛑
+        if (itemParent != null)
+        {
+            while (itemParent.childCount > 0)
+            {
+                DestroyImmediate(itemParent.GetChild(0).gameObject);
+            }
+        }
+
+        // 3. Limpieza de lista (Secundario, por si algo quedó fuera del padre)
+        // Usamos DestroyImmediate también aquí.
+        for (int i = spawnedObjects.Count - 1; i >= 0; i--)
+    {
+        GameObject obj = spawnedObjects[i];
+        if (obj != null)
+        {
+            DestroyImmediate(obj);
+        }
+    }
+    spawnedObjects.Clear();
+    
+    Debug.Log("[LIMPIEZA] Objetos de contenido de mazmorra anteriores destruidos.");
+}
+
+    public void ForceAIGraphInjection()
+    {
+        // 1. Obtener las referencias de GraphTest y ContextSolver
+        ContextSolver solver = GetComponent<ContextSolver>(); // Asegúrate que ContentGenerator tiene estos componentes
+        GraphTest graphRunner = GetComponent<GraphTest>();
+
+        if (graphRunner == null)
+        {
+            graphRunner = FindObjectOfType<GraphTest>();
+            if (graphRunner == null)
+            {
+                Debug.LogError("FATAL: No se encontró GraphTest en la escena para inyección de IA.");
+                return;
+            }
+        }
+        if (solver == null)
+        {
+            solver = FindObjectOfType<ContextSolver>();
+        }
+
+        // Si el graphTest es la referencia serializada, el objeto que se crea/regenera
+        // puede tener una referencia diferente. Forzaremos la asignación interna también.
+        this.graphTest = graphRunner; // Aseguramos que la referencia interna del generador sea correcta.
+
+        Debug.Log($"[INYECCIÓN DEBUG] Inyectando referencias: GraphTest encontrado.");
+
+        // 2. Iterar sobre todos los objetos que spawneamos y re-inyectar
+        foreach (GameObject content in spawnedObjects)
+        {
+            if (content == null) continue;
+
+            EnemyAI enemyAI = content.GetComponent<EnemyAI>();
+
+            if (enemyAI != null)
+            {
+                // 🛑 Re-inyección 🛑
+                enemyAI.graphTest = graphRunner; // Requires 'public' access in EnemyAI
+                if (solver != null)
+                {
+                    enemyAI.movementDirectionSolver = solver; // Requires 'public' access in EnemyAI
+                }
+            }
+        }
+
+        // **OPCIONAL:** Forzar el recálculo inicial del mapa de costos aquí si no se hace en SelectPlayerSpawnPoint
+        // Reajustar la posición del jugador después de la inyección
+
+        Debug.Log("[IA INYECTADA] Grafo y Solver reinyectados en todos los enemigos.");
     }
 
 }

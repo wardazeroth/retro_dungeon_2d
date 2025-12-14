@@ -40,16 +40,54 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     //            Debug.LogError("tilemapVisualizer es NULL. No se puede iniciar la generación.");
     //        }
     //}
+
+    void Start() // Se ejecuta una vez al cargar la escena
+    {
+        // 🛑 1. Suscribir la generación al evento 🛑
+        // Esto permite que el RoomContentGenerator (al presionar Espacio) llame a RunProceduralGeneration.
+        if (roomContentGenerator != null)
+        {
+            roomContentGenerator.RegenerateDungeon.AddListener(RunProceduralGeneration);
+        }
+
+        RunProceduralGeneration();
+
+        // 3. Desactivar el flag para el futuro
+        GameManager.ShouldGenerateNewDungeon = false;
+    }
+
+
     protected override void RunProceduralGeneration()
+
     {
         //ClearPreviousGeneration();
         // Esto asegura que la secuencia de números aleatorios sea diferente en cada ejecución.
+        if (roomContentGenerator != null)
+        {
+            // Forzamos la destrucción de los objetos ANTES de dibujar nada nuevo.
+            roomContentGenerator.DestroyAllSpawnedObjects();
+        }
+
+        // 🛑 2. LIMPIEZA DE TILEMAPS 🛑
+
+        tilemapVisualizer.Clear();
+
+
         UnityEngine.Random.InitState((int)System.DateTime.Now.Ticks);
-
         dungeonData = new DungeonData();
-
         roomsDictionary.Clear();
         CreateRooms();
+
+        tilemapVisualizer.PaintFloorTiles(dungeonData.floorPositions);
+        WallGenerator.CreateWalls(dungeonData.floorPositions, tilemapVisualizer);
+
+        // 4. SPAWN E INYECCIÓN DE IA
+        if (roomContentGenerator != null)
+        {
+            // Spawnea y calcula Dijkstra inicial, y la IA se activa.
+            roomContentGenerator.GenerateRoomContent(dungeonData);
+            roomContentGenerator.ForceAIGraphInjection();
+        }
     }
 
     private HashSet<Vector2Int> IncreaseCorridorBrush2y2(HashSet<Vector2Int> corridor)
@@ -77,6 +115,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
     private void CreateRooms()
     {
+
         var roomsList = ProceduralGenerationAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int
             (dungeonWidth, dungeonHeight)), minRoomWidth, minRoomHeight);
 
@@ -140,15 +179,15 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         dungeonData.floorPositions = floor;
         dungeonData.corridorPositions = wideCorridors;
 
-        tilemapVisualizer.PaintFloorTiles(floor);
-        WallGenerator.CreateWalls(floor, tilemapVisualizer);
+        //tilemapVisualizer.PaintFloorTiles(floor);
+        //WallGenerator.CreateWalls(floor, tilemapVisualizer);
 
-        //Invocar controlador de spawn
-        if (roomContentGenerator != null)
-        {
-            // Pasamos el objeto DungeonData COMPLETO al spawner.
-            roomContentGenerator.GenerateRoomContent(dungeonData);
-        }
+        ////Invocar controlador de spawn
+        //if (roomContentGenerator != null)
+        //{
+        //    // Pasamos el objeto DungeonData COMPLETO al spawner.
+        //    roomContentGenerator.GenerateRoomContent(dungeonData);
+        //}
     }
 
     private HashSet<Vector2Int> CreateSingleRandomRoom(BoundsInt roomBounds)
@@ -248,49 +287,4 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         return roomFloor;
     }
 
-    // RoomFirstDungeonGenerator.cs
-
-    // Asume que tienes esta referencia: [SerializeField] private RoomContentGenerator roomContentGenerator;
-
-    //protected override void ClearPreviousGeneration()
-    //{
-    //    // 1. Verificar la Referencia al Contenedor Padre
-    //    // El 'ItemParent' es el objeto que creamos (_DungeonContent) que contiene todos los enemigos/ítems.
-    //    if (roomContentGenerator == null || roomContentGenerator.itemParent == null)
-    //    {
-    //        Debug.LogError("FATAL ERROR: El contenedor de contenido (Item Parent) no está asignado en RoomContentGenerator.");
-
-    //        // 🚨 Fallback para el Jugador: Intentamos destruir el jugador por su nombre de clon.
-    //        GameObject oldPlayer = GameObject.Find("Player_asset(Clone)");
-    //        if (oldPlayer != null)
-    //        {
-    //            DestroyImmediate(oldPlayer);
-    //            Debug.Log("Limpieza de jugador anterior completada por nombre.");
-    //        }
-    //        return;
-    //    }
-
-    //    Transform contentParent = roomContentGenerator.itemParent;
-
-    //    // 2. ELIMINAR CONTENIDO DEL CONTENEDOR (Enemigos e Ítems Viejos)
-
-    //    // Iterar de atrás hacia adelante es VITAL cuando se usa DestroyImmediate en un bucle, 
-    //    // ya que evita que los índices de los hijos cambien a medida que se destruyen los objetos.
-    //    while (contentParent.childCount > 0) // Iterar con while es más seguro que el for decremental
-    //    {
-    //        GameObject childToDestroy = contentParent.GetChild(0).gameObject;
-    //        childToDestroy.hideFlags = HideFlags.HideAndDontSave;
-    //        DestroyImmediate(childToDestroy);
-    //    }
-
-    //    // 3. ELIMINAR JUGADOR VIEJO (Si por alguna razón no fue hijo del contenedor)
-    //    // Hacemos una búsqueda de respaldo para asegurar que el clon del jugador no se quede.
-    //    GameObject backupPlayer = GameObject.Find("Player_asset(Clone)");
-    //    if (backupPlayer != null)
-    //    {
-    //        DestroyImmediate(backupPlayer);
-    //    }
-
-    //    Debug.Log($"Limpieza de mazmorra anterior completada. Objetos eliminados del contenedor.");
-    //}
 }

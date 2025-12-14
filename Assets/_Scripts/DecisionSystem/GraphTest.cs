@@ -14,10 +14,13 @@ public class GraphTest : MonoBehaviour
     Dictionary<Vector2Int, int> dijkstraResult;
 
     int highestValue;
+    public IEnumerable<Vector2Int> FloorPositions { get; private set; } // O HashSet<Vector2Int>
 
     public void RunDjiskstraAlgorithm(Vector2Int playerPosition, IEnumerable<Vector2Int> floorPositions)
     {
         graphReady = false;
+
+        this.FloorPositions = floorPositions;
 
         //Crear el Graph que contiene todas las baldosas transitables
         graph = new Graph(floorPositions);
