@@ -32,9 +32,6 @@ public class GameManager : MonoBehaviour
         if (contentGenerator != null)
         {
             contentGenerator.DestroyAllSpawnedObjects();
-            // 🛑 1. Disparar el evento de regeneración 🛑
-            // Esto llamará a RunProceduralGeneration() en el Generador.
-            //contentGenerator.RegenerateDungeon?.Invoke();
         }
 
         Time.timeScale = 1f;
