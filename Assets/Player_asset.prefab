@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 659627435271794654}
   - component: {fileID: 2470215607895296331}
   - component: {fileID: 8588942912112780043}
+  - component: {fileID: 8099135615424141535}
   m_Layer: 6
   m_Name: Player_asset
   m_TagString: Player
@@ -200,3 +201,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphTest: {fileID: 0}
   dijkstraUpdateDelay: 0.2
+--- !u!114 &8099135615424141535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825061344083000801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b9698a5f7092b468dfe1dcca3fa3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPlayerDied:
+    m_PersistentCalls:
+      m_Calls: []
