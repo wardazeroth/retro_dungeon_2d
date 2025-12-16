@@ -155,6 +155,11 @@ public class EnemyAI : MonoBehaviour
             following = false;
             //StopMovement (Animación IDLE)
             animator?.SetBool("isMoving", false);
+
+            //Al perderel target, forzamos la dirección por deefcto (abaji) para el IDle
+            animator?.SetFloat("MoveX", 0f);
+            animator?.SetFloat("MoveY", -1f);
+
             StopCoroutine(ChaseAndAttack());
             DEBUG_MovementInput = Vector2.zero;
         }
@@ -229,6 +234,11 @@ public class EnemyAI : MonoBehaviour
                 // Fallback si Graphtest es null
                 DEBUG_MovementInput = movementDirectionSolver.GetDirectionToMove(steeringBehaviours, aiData);
             }
+
+            //Enviar la dirección calculada al Animator (Blend Tree)
+            //Enviar valores de dirección X e Y al Blend Tree
+            animator?.SetFloat("MoveX", DEBUG_MovementInput.x);
+            animator?.SetFloat("MoveY", DEBUG_MovementInput.y);
 
             // El enemigo sigue consultando el mapa a la velocidad de 0.06s, pero el mapa solo cambia cada 0.2s (PlayerUpdater)
             yield return new WaitForSeconds(aiUpdateDelay);
