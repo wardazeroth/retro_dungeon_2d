@@ -4,7 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
+    
 {
+    [SerializeField] private GameObject defeatPanel;
+
     public static bool ShouldGenerateNewDungeon = false;
     private void Awake()
     {
@@ -21,6 +24,22 @@ public class GameManager : MonoBehaviour
         if (winPanel != null)
         {
             winPanel.SetActive(true);
+        }
+    }
+
+    public void EndGameDefeat()
+    {
+        Debug.Log("¡GAME OVER! El jugador ha muerto.");
+        Time.timeScale = 0f;
+
+        if (defeatPanel != null)
+        {
+            defeatPanel.SetActive(true);
+        }
+        else
+        {
+            // Si no hay panel, forzar un reinicio simple
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 

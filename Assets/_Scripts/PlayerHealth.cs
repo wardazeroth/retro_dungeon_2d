@@ -9,17 +9,26 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     private float currentHealth;
 
+    private GameManager gameManager;
+
     public float MaxHealth => maxHealth;
     public float CurrentHealthValue => currentHealth;
 
     public UnityEvent<float, float> OnHealthChanged;
 
-    public UnityEvent OnPlayerDied;
+    //public UnityEvent OnPlayerDied;
 
     void Awake()
     {
         currentHealth = maxHealth;
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
+
+        gameManager = FindObjectOfType<GameManager>();
+
+        if (gameManager != null)
+        {
+            Debug.LogError("FATAL: No se encontró el objeto _GameManager en la escena.");
+        }
     }
     
     public void TakeDamage(float amount)
@@ -28,7 +37,8 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth < 0)
         {
             currentHealth= 0;
-            OnPlayerDied?.Invoke();
+            HandlePlayerDeath();
+            //OnPlayerDied?.Invoke();
         }
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
@@ -47,16 +57,13 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
     }
 
-    void Update()
+    private void HandlePlayerDeath()
     {
-        // PRUEBA DE DAÑO TEMPORAL
-        if (Input.GetKeyDown(KeyCode.H))
+        if (gameManager != null)
         {
-            TakeDamage(10f); // Verifica que la barra baja
+            gameManager.EndGameDefeat();
+
         }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            HealByPercentage(0.15f); // Verifica que la barra sube
-        }
+        gameObject.SetActive(false);
     }
 }

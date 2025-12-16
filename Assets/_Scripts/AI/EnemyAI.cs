@@ -30,6 +30,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private float maxChaseDistance = 15f;
 
+    [Header("Combat Settings")]
+    [SerializeField] private float attackDamage = 10f;
+
     //Inputs enviados desde la IA al controlador de miovimiento del enemigo
     public UnityEvent OnAttackPressed;
     public UnityEvent<Vector2> OnMovementInput, OnPointerInput;
@@ -44,31 +47,19 @@ public class EnemyAI : MonoBehaviour
 
     bool isInitialized = false;
 
+    //Referencia al compenente Animator
+    [Header("Animation Control")]
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        //// 🛑 IMPORTANTE: Busca el objeto central por su nombre EXACTO 
-        //GameObject spawnerObject = GameObject.Find("_RoomSpawnerController");
-
-        //if (spawnerObject != null)
-        //{
-        //    // Obtener las herramientas directamente del objeto encontrado
-        //    graphTest = spawnerObject.GetComponent<GraphTest>();
-        //    movementDirectionSolver = spawnerObject.GetComponent<ContextSolver>();
-        //}
-        //else
-        //{
-        //    Debug.LogError("Error FATAL de IA: No se encontró el objeto central '_RoomSpawnerController'.");
-        //}
-
-        //if (graphTest == null)
-        //{
-        //    graphTest = FindObjectOfType<GraphTest>();
-        //}
-        //if (movementDirectionSolver == null)
-        //{
-        //    movementDirectionSolver = FindObjectOfType<ContextSolver>();
-        //}
+        //Obtener compnente Animator
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError($"[IA FATAL] Enemigo '{gameObject.name}' no tiene componente Animator. No se puede animar.");
+        }
 
         if (graphTest == null)
         {
@@ -88,6 +79,11 @@ public class EnemyAI : MonoBehaviour
         if (aiData.currentTarget != null)
         {
             Debug.Log($"[DETECCIÓN] Enemigo '{gameObject.name}' te está persiguiendo.");
+        }
+        else
+        {
+            //Si no hay target, el Goblin debe estar en IDLE
+            animator?.SetBool("IsMoving", false);
         }
     }
 
@@ -132,6 +128,8 @@ public class EnemyAI : MonoBehaviour
                 if (following == false)
                 {
                     following = true;
+                    //SetBool asegura que la animación Run inicie rápidamente si el target aparece
+                    animator?.SetBool("isMoving", true);
                     StartCoroutine(ChaseAndAttack());
                 }
             }
@@ -155,6 +153,8 @@ public class EnemyAI : MonoBehaviour
         {
             // Si target se pierde (ej. se esconde detrás de un muro), detenemos.
             following = false;
+            //StopMovement (Animación IDLE)
+            animator?.SetBool("isMoving", false);
             StopCoroutine(ChaseAndAttack());
             DEBUG_MovementInput = Vector2.zero;
         }
@@ -169,6 +169,9 @@ public class EnemyAI : MonoBehaviour
         {
             DEBUG_MovementInput = Vector2.zero;
             following = false;
+            //Asegurar que la animación de IDLE se activa al salir
+            animator?.SetBool("isMoving", false);
+
             yield break;
         }
 
@@ -179,6 +182,12 @@ public class EnemyAI : MonoBehaviour
         {
             // FASE 1: ATAQUE
             DEBUG_MovementInput = Vector2.zero;
+
+            //Detener la animación de movimiento antes de atacar
+            animator?.SetBool("isMoving", false);
+            
+            //Activar el trigger de ataque
+            animator?.SetTrigger("AttackTrigger");
             OnAttackPressed?.Invoke();
             yield return new WaitForSeconds(attackDelay);
             StartCoroutine(ChaseAndAttack());
@@ -187,15 +196,16 @@ public class EnemyAI : MonoBehaviour
         {
             // FASE 2: PERSECUCIÓN
 
+            //Activar la animación de movimiento (si ya no estaba activa)
+            animator?.SetBool("isMoving", true);
+
             if (graphTest != null)
             {
                 var currentFloorMap = graphTest.FloorPositions;
 
                 if (currentFloorMap != null)
                 {
-                    // 🛑 ELIMINAMOS LA LINEA COSTOSA DE RECALCULO DE DIJKSTRA DE AQUÍ 🛑
-                    // graphTest.RunDjiskstraAlgorithm(currentPlayerGridPosition, currentFloorMap); 
-
+                    
                     Vector2Int currentGridPosition = Vector2Int.RoundToInt(transform.position);
                     Vector2Int nextGridStep = graphTest.GetDirectionToLowestCostNeighbour(currentGridPosition);
 
@@ -223,6 +233,30 @@ public class EnemyAI : MonoBehaviour
             // El enemigo sigue consultando el mapa a la velocidad de 0.06s, pero el mapa solo cambia cada 0.2s (PlayerUpdater)
             yield return new WaitForSeconds(aiUpdateDelay);
             StartCoroutine(ChaseAndAttack());
+        }
+    }
+
+    public void ExecuteAttackDamage()
+    {
+        //Verificar si el onjetivo (Player) todavía existe y está cerca
+        if (aiData.currentTarget != null)
+        {
+            //Calcular distancia actual al objetivoi
+            float distance = Vector2.Distance(aiData.currentTarget.position, transform.position);
+
+            if (distance <= attackDistance)
+            {
+                //Intentar obtener el componente PlayerHealth
+                //PlayerHealth está en el objeto 'currenTarget' (el jugador)
+                PlayerHealth playerHealth = aiData.currentTarget.GetComponent<PlayerHealth>();
+
+                if (playerHealth != null)
+                {
+                    //Aplicar daño
+                    playerHealth.TakeDamage(attackDamage);
+                    Debug.Log($"¡Daño infligido al jugador! Daño: {attackDamage}");
+                }
+            }
         }
     }
 }

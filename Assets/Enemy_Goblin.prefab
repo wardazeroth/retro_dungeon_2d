@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -1093754448809995655}
   - component: {fileID: -344961623307878642}
   - component: {fileID: -2423880752791488867}
+  - component: {fileID: 4780956759004453744}
   m_Layer: 0
   m_Name: Enemy_Goblin
   m_TagString: Untagged
@@ -289,6 +290,27 @@ MonoBehaviour:
   radius: 0.8
   agentColliderSize: 0.6
   showGizmo: 1
+--- !u!95 &4780956759004453744
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268454981252747614}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbab27dcdf1494e49bae088eae6f7ae3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5391390287261433966
 PrefabInstance:
   m_ObjectHideFlags: 0
