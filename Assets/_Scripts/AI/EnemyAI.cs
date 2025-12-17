@@ -83,7 +83,7 @@ public class EnemyAI : MonoBehaviour
         else
         {
             //Si no hay target, el Goblin debe estar en IDLE
-            animator?.SetBool("IsMoving", false);
+            animator?.SetBool("isMoving", false);
         }
     }
 

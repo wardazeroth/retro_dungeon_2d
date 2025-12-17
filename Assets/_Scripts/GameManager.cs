@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public void EndGameDefeat()
     {
         Debug.Log("¡GAME OVER! El jugador ha muerto.");
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
 
         if (defeatPanel != null)
         {
@@ -41,6 +41,13 @@ public class GameManager : MonoBehaviour
             // Si no hay panel, forzar un reinicio simple
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        GameManager.ShouldGenerateNewDungeon = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ResumeGame()

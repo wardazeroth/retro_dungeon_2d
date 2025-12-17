@@ -18,6 +18,9 @@ public class EnemyHealth : MonoBehaviour
 
     private Animator animator;
 
+    [Header("Muerte")]
+    private bool isDying = false;
+
     void Awake()
     {
         currentHealth = maxHealth;
@@ -49,11 +52,18 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
+        if (isDying) return;
+        isDying = true;
+
+        GetComponent<Collider2D>().enabled = false; // Ya no recibe golpes
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero; // No se desliza
+
         EnemyAI aiScript = GetComponent<EnemyAI>();
         if (aiScript != null) aiScript.enabled = false;
 
-        GetComponent<Collider2D>().enabled = false;
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        animator?.SetTrigger("DeathTrigger");
+
+        Destroy(gameObject, 2f);
         //OnEnemyDied?.Invoke();
         //OnEnemyDied?.Invoke();
         //Debug.Log($"{gameObject.name} ha sido derrotado.");
