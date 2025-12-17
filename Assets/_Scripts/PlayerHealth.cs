@@ -9,6 +9,13 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     private float currentHealth;
 
+    [Header("Efectos Visuales")]
+    [SerializeField] private Color healColor = Color.green;
+    [SerializeField] private float flashDuration = 0.2f;
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private ParticleSystem healParticles;
+
     private GameManager gameManager;
     private Animator animator;
     private bool isDying = false;
@@ -33,6 +40,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.LogError("FATAL: No se encontró el objeto _GameManager en la escena.");
         }
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
     public void TakeDamage(float amount)
@@ -61,6 +70,14 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
         OnHealthChanged?.Invoke(currentHealth, maxHealth);
+
+        StopCoroutine(HealFlash());
+        StartCoroutine(HealFlash());
+
+        if (healParticles != null)
+        {
+            healParticles.Play();
+        }
     }
 
     private void HandlePlayerDeath()
@@ -102,5 +119,13 @@ public class PlayerHealth : MonoBehaviour
 
         }
         gameObject.SetActive(false);
+    }
+
+    private IEnumerator HealFlash()
+    {
+        spriteRenderer.color = healColor;
+        yield return new WaitForSeconds(flashDuration);
+
+        spriteRenderer.color = Color.white;
     }
 }
