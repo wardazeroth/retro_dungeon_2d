@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14b235502f524dc4c80c2ee456cd7e51
-      internalID: -2098861866
+      spriteID: 17fc89b3ffdb65442bbb26438e61d6f9
+      internalID: -1453100128
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 978e4bae881b808408527e59bfee51ab
-      internalID: 2047655374
+      spriteID: 6e100db1aec7a144c9ceace93791dd5d
+      internalID: 610096315
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5956b6899b6129749971d922dbe34527
-      internalID: 1229860320
+      spriteID: 2f8373b3cdac2a84e80cf0043211480c
+      internalID: -1734050573
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87732a389d6c8404494f662aaaf8a49d
-      internalID: -198774481
+      spriteID: ebe6517abe7576143958f7e8858201ff
+      internalID: 1357849322
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a00333df014421149bd2a5333b8fe20b
-      internalID: -1109206140
+      spriteID: 66d733182192eee4cab5c3bbf374efbd
+      internalID: -900311265
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c606ab2a8d6b709428ca182a93556f07
-      internalID: -1769511961
+      spriteID: f87fcc2a752008049ad042856f9cf6db
+      internalID: -1587524033
       vertices: []
       indices: 
       edges: []
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab5b2704d934e924ebc4272e8f8731ae
-      internalID: -716831743
+      spriteID: 584d790aaa43cad44a9c266d6b05f1ba
+      internalID: 1372184953
       vertices: []
       indices: 
       edges: []
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: debaaf2f691d37449a731a7af7e6d71b
-      internalID: 1485093389
+      spriteID: ec12568b6c15fe44f990fe0fa25d15f1
+      internalID: -2033247991
       vertices: []
       indices: 
       edges: []
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2a1e17148a05b24ea85d7e3a636dd8f
-      internalID: 599121905
+      spriteID: e1b6c9096c52e524d9ed371617db728c
+      internalID: -1409037624
       vertices: []
       indices: 
       edges: []
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b73a01d0f1c1474098aeeca0d6377f6
-      internalID: 1446745320
+      spriteID: 0786cff896cf012419259da08829f541
+      internalID: -2021697396
       vertices: []
       indices: 
       edges: []
@@ -317,16 +317,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GoblinDownAttack01_0: -2098861866
-      GoblinDownAttack01_1: 2047655374
-      GoblinDownAttack01_2: 1229860320
-      GoblinDownAttack01_3: -198774481
-      GoblinDownAttack01_4: -1109206140
-      GoblinDownAttack01_5: -1769511961
-      GoblinDownAttack01_6: -716831743
-      GoblinDownAttack01_7: 1485093389
-      GoblinDownAttack01_8: 599121905
-      GoblinDownAttack01_9: 1446745320
+      GoblinDownAttack01_0: -1453100128
+      GoblinDownAttack01_1: 610096315
+      GoblinDownAttack01_2: -1734050573
+      GoblinDownAttack01_3: 1357849322
+      GoblinDownAttack01_4: -900311265
+      GoblinDownAttack01_5: -1587524033
+      GoblinDownAttack01_6: 1372184953
+      GoblinDownAttack01_7: -2033247991
+      GoblinDownAttack01_8: -1409037624
+      GoblinDownAttack01_9: -2021697396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

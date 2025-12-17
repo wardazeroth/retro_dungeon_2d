@@ -19,9 +19,10 @@ GameObject:
   - component: {fileID: -344961623307878642}
   - component: {fileID: -2423880752791488867}
   - component: {fileID: 4780956759004453744}
-  m_Layer: 0
+  - component: {fileID: 2702385431840340365}
+  m_Layer: 8
   m_Name: Enemy_Goblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,6 +191,7 @@ MonoBehaviour:
   attackDistance: 0.5
   graphTest: {fileID: 0}
   maxChaseDistance: 15
+  attackDamage: 10
   OnAttackPressed:
     m_PersistentCalls:
       m_Calls: []
@@ -311,6 +313,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2702385431840340365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268454981252747614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90d528c6137b984ca6f674c2dc2a987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEnemyDied:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5391390287261433966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,6 +340,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5778669408992347701}
     m_Modifications:
+    - target: {fileID: 572717879653006058, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2746123706830468309, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -443,6 +468,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4938090091242661596, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963682277276784949, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5678019035618421546, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
       propertyPath: healthSlider
       value: 
@@ -470,6 +503,14 @@ PrefabInstance:
     - target: {fileID: 8464237153465904016, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8638732428085914407, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125808419163230716, guid: ecbb6077afd997442abd090b4868b27f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5678019035618421546, guid: ecbb6077afd997442abd090b4868b27f, type: 3}

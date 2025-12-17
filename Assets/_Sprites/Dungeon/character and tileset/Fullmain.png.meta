@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fullmain_0
+      name: Player_Idle_Up_0
       rect:
         serializedVersion: 2
         x: 15
@@ -105,7 +105,7 @@ TextureImporter:
         width: 17
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_1
+      name: Player_Idle_Up_01
       rect:
         serializedVersion: 2
         x: 65
@@ -126,7 +126,7 @@ TextureImporter:
         width: 17
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_2
+      name: Player_Idle_Up_02
       rect:
         serializedVersion: 2
         x: 115
@@ -147,7 +147,7 @@ TextureImporter:
         width: 17
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_3
+      name: Player_Idle_Up_03
       rect:
         serializedVersion: 2
         x: 165
@@ -168,7 +168,7 @@ TextureImporter:
         width: 17
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_4
+      name: Player_Run_Up_0
       rect:
         serializedVersion: 2
         x: 13
@@ -189,7 +189,7 @@ TextureImporter:
         width: 23
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,15 +202,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_5
+      name: Player_Run_Up_01
       rect:
         serializedVersion: 2
         x: 61
-        y: 372
+        y: 371
         width: 25
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_6
+      name: Player_Run_Up_02
       rect:
         serializedVersion: 2
         x: 110
@@ -231,7 +231,7 @@ TextureImporter:
         width: 26
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_7
+      name: Player_Run_Up_03
       rect:
         serializedVersion: 2
         x: 160
@@ -252,7 +252,7 @@ TextureImporter:
         width: 25
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_8
+      name: Player_Run_Up_04
       rect:
         serializedVersion: 2
         x: 210
@@ -273,7 +273,7 @@ TextureImporter:
         width: 26
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_9
+      name: Player_Run_Up_05
       rect:
         serializedVersion: 2
         x: 260
@@ -294,7 +294,7 @@ TextureImporter:
         width: 26
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_10
+      name: Player_Run_Down_0
       rect:
         serializedVersion: 2
         x: 10
@@ -315,7 +315,7 @@ TextureImporter:
         width: 27
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_11
+      name: Playeer_Run_Down_01
       rect:
         serializedVersion: 2
         x: 64
@@ -336,7 +336,7 @@ TextureImporter:
         width: 20
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,7 +349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_12
+      name: Player_Run_Down_02
       rect:
         serializedVersion: 2
         x: 117
@@ -357,7 +357,7 @@ TextureImporter:
         width: 17
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_13
+      name: Player_Run_Down_03
       rect:
         serializedVersion: 2
         x: 162
@@ -378,7 +378,7 @@ TextureImporter:
         width: 26
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,15 +391,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_14
+      name: Player_Run_Down_04
       rect:
         serializedVersion: 2
-        x: 210
+        x: 211
         y: 340
         width: 24
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,7 +412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_15
+      name: Player_Run_Down_05
       rect:
         serializedVersion: 2
         x: 260
@@ -420,7 +420,7 @@ TextureImporter:
         width: 26
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_16
+      name: Player_Run_Down_06
       rect:
         serializedVersion: 2
         x: 313
@@ -441,7 +441,7 @@ TextureImporter:
         width: 24
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,7 +454,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_17
+      name: Player_RUn_Down_07
       rect:
         serializedVersion: 2
         x: 359
@@ -462,7 +462,7 @@ TextureImporter:
         width: 26
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -475,7 +475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_18
+      name: Player_Run_Down_08
       rect:
         serializedVersion: 2
         x: 410
@@ -483,7 +483,7 @@ TextureImporter:
         width: 27
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -496,7 +496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_19
+      name: Player_Run_Down_09
       rect:
         serializedVersion: 2
         x: 464
@@ -504,7 +504,7 @@ TextureImporter:
         width: 20
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,7 +525,7 @@ TextureImporter:
         width: 17
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -546,7 +546,7 @@ TextureImporter:
         width: 18
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,7 +567,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,7 +588,7 @@ TextureImporter:
         width: 21
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,7 +609,7 @@ TextureImporter:
         width: 22
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -630,7 +630,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -651,7 +651,7 @@ TextureImporter:
         width: 28
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -672,7 +672,7 @@ TextureImporter:
         width: 18
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -693,7 +693,7 @@ TextureImporter:
         width: 17
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -706,7 +706,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_29
+      name: Player_Attack_Right_0
       rect:
         serializedVersion: 2
         x: 12
@@ -714,7 +714,7 @@ TextureImporter:
         width: 20
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -727,7 +727,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_30
+      name: Player_Attack_Right_01
       rect:
         serializedVersion: 2
         x: 64
@@ -735,7 +735,7 @@ TextureImporter:
         width: 20
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -748,7 +748,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_31
+      name: Player_Attack_Right_02
       rect:
         serializedVersion: 2
         x: 111
@@ -756,7 +756,7 @@ TextureImporter:
         width: 23
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -769,7 +769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_32
+      name: Player_Attack_Right_03
       rect:
         serializedVersion: 2
         x: 157
@@ -777,7 +777,7 @@ TextureImporter:
         width: 40
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -790,7 +790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_33
+      name: Player_Attack_Right_04
       rect:
         serializedVersion: 2
         x: 200
@@ -798,7 +798,7 @@ TextureImporter:
         width: 37
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -811,7 +811,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_34
+      name: Player_Attack_Right_05
       rect:
         serializedVersion: 2
         x: 252
@@ -819,7 +819,7 @@ TextureImporter:
         width: 31
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -832,7 +832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_35
+      name: Player_Attack_Right_06
       rect:
         serializedVersion: 2
         x: 300
@@ -840,7 +840,7 @@ TextureImporter:
         width: 33
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -853,7 +853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_36
+      name: Player_Attack_Right_07
       rect:
         serializedVersion: 2
         x: 351
@@ -861,7 +861,7 @@ TextureImporter:
         width: 45
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -874,7 +874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_37
+      name: Player_Attack_Right_08
       rect:
         serializedVersion: 2
         x: 410
@@ -882,7 +882,7 @@ TextureImporter:
         width: 35
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -895,7 +895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_38
+      name: Player_Attack_Right_09
       rect:
         serializedVersion: 2
         x: 459
@@ -903,7 +903,7 @@ TextureImporter:
         width: 32
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -916,7 +916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_39
+      name: Player_Attack_Right_10
       rect:
         serializedVersion: 2
         x: 14
@@ -924,7 +924,7 @@ TextureImporter:
         width: 25
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -937,7 +937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_40
+      name: Player_Attack_Right_11
       rect:
         serializedVersion: 2
         x: 64
@@ -945,7 +945,7 @@ TextureImporter:
         width: 24
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -958,7 +958,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_41
+      name: Player_Attack_Right_12
       rect:
         serializedVersion: 2
         x: 100
@@ -966,7 +966,7 @@ TextureImporter:
         width: 84
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -979,7 +979,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_42
+      name: Player_Attack_Right_13
       rect:
         serializedVersion: 2
         x: 200
@@ -987,7 +987,7 @@ TextureImporter:
         width: 33
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1000,7 +1000,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_43
+      name: Player_Attack_Right_14
       rect:
         serializedVersion: 2
         x: 250
@@ -1008,7 +1008,7 @@ TextureImporter:
         width: 33
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1021,7 +1021,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_44
+      name: Player_Attack_Right_15
       rect:
         serializedVersion: 2
         x: 311
@@ -1029,7 +1029,7 @@ TextureImporter:
         width: 23
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1042,7 +1042,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_45
+      name: Player_Attack_Right_16
       rect:
         serializedVersion: 2
         x: 364
@@ -1050,7 +1050,7 @@ TextureImporter:
         width: 20
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1063,7 +1063,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_46
+      name: Player_Attack_Right_17
       rect:
         serializedVersion: 2
         x: 411
@@ -1071,7 +1071,7 @@ TextureImporter:
         width: 21
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1084,7 +1084,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_47
+      name: Player_Attack_Right_18
       rect:
         serializedVersion: 2
         x: 464
@@ -1092,7 +1092,7 @@ TextureImporter:
         width: 18
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1105,7 +1105,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_48
+      name: Player_Idle_Down_0
       rect:
         serializedVersion: 2
         x: 11
@@ -1113,7 +1113,7 @@ TextureImporter:
         width: 22
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1126,7 +1126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_49
+      name: Player_Idle_Down_01
       rect:
         serializedVersion: 2
         x: 61
@@ -1134,7 +1134,7 @@ TextureImporter:
         width: 22
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1147,7 +1147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_50
+      name: Player_Idle_Down_02
       rect:
         serializedVersion: 2
         x: 161
@@ -1155,7 +1155,7 @@ TextureImporter:
         width: 22
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1168,7 +1168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_51
+      name: Player_Idle_Down_03
       rect:
         serializedVersion: 2
         x: 212
@@ -1176,7 +1176,7 @@ TextureImporter:
         width: 22
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1189,7 +1189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_52
+      name: Player_Idle_Down_04
       rect:
         serializedVersion: 2
         x: 264
@@ -1197,7 +1197,7 @@ TextureImporter:
         width: 20
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1210,7 +1210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_53
+      name: Player_Idle_Down_05
       rect:
         serializedVersion: 2
         x: 312
@@ -1218,7 +1218,7 @@ TextureImporter:
         width: 22
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1231,15 +1231,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_54
+      name: Player_Run_Right_0
       rect:
         serializedVersion: 2
-        x: 13
+        x: 14
         y: 150
         width: 23
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1252,7 +1252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_55
+      name: Player_Run_Right_01
       rect:
         serializedVersion: 2
         x: 59
@@ -1260,7 +1260,7 @@ TextureImporter:
         width: 28
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1273,15 +1273,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_56
+      name: Player_Run_Right_02
       rect:
         serializedVersion: 2
-        x: 105
+        x: 104
         y: 150
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1294,7 +1294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_57
+      name: Player_Run_Right_03
       rect:
         serializedVersion: 2
         x: 159
@@ -1302,7 +1302,7 @@ TextureImporter:
         width: 28
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1315,7 +1315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullmain_58
+      name: Player_Run_Right_04
       rect:
         serializedVersion: 2
         x: 208
@@ -1323,7 +1323,7 @@ TextureImporter:
         width: 29
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1344,7 +1344,7 @@ TextureImporter:
         width: 27
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1365,7 +1365,7 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1386,7 +1386,7 @@ TextureImporter:
         width: 36
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1407,7 +1407,7 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1428,7 +1428,7 @@ TextureImporter:
         width: 33
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1451,19 +1451,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fullmain_0: -139552819
-      Fullmain_1: 702980997
-      Fullmain_10: 1017511756
-      Fullmain_11: 1881253208
-      Fullmain_12: -1662116912
-      Fullmain_13: 1216903581
-      Fullmain_14: 573454149
-      Fullmain_15: 463364507
-      Fullmain_16: -2067252148
-      Fullmain_17: 176724945
-      Fullmain_18: 1023215388
-      Fullmain_19: 322192370
-      Fullmain_2: -228455284
       Fullmain_20: 1290622707
       Fullmain_21: -1136393382
       Fullmain_22: -691912778
@@ -1473,48 +1460,61 @@ TextureImporter:
       Fullmain_26: 279293454
       Fullmain_27: -1673524731
       Fullmain_28: 1842466351
-      Fullmain_29: 936175230
-      Fullmain_3: -1233404436
-      Fullmain_30: -1592614925
-      Fullmain_31: 1675383534
-      Fullmain_32: 1392605669
-      Fullmain_33: -509696010
-      Fullmain_34: -172834175
-      Fullmain_35: 656698057
-      Fullmain_36: 38164743
-      Fullmain_37: 186521017
-      Fullmain_38: 641895828
-      Fullmain_39: 1455650212
-      Fullmain_4: -1780815931
-      Fullmain_40: -97133668
-      Fullmain_41: 1699375413
-      Fullmain_42: -213086066
-      Fullmain_43: 1801673487
-      Fullmain_44: -719546420
-      Fullmain_45: -1878362913
-      Fullmain_46: -1999399337
-      Fullmain_47: 856805814
-      Fullmain_48: -328149053
-      Fullmain_49: -1995078286
-      Fullmain_5: -1389873880
-      Fullmain_50: -315173255
-      Fullmain_51: -121125810
-      Fullmain_52: 185894714
-      Fullmain_53: -167533970
-      Fullmain_54: 1393990369
-      Fullmain_55: 53288089
-      Fullmain_56: 459230343
-      Fullmain_57: 1253135669
-      Fullmain_58: -578519105
       Fullmain_59: 722169858
-      Fullmain_6: 1366027188
       Fullmain_60: 1425480853
       Fullmain_61: 1320417976
       Fullmain_62: 941124342
       Fullmain_63: -1883325116
-      Fullmain_7: -313100074
-      Fullmain_8: -1460452449
-      Fullmain_9: 319021680
+      Playeer_Run_Down_01: 1881253208
+      Player_Attack_Right_0: 936175230
+      Player_Attack_Right_01: -1592614925
+      Player_Attack_Right_02: 1675383534
+      Player_Attack_Right_03: 1392605669
+      Player_Attack_Right_04: -509696010
+      Player_Attack_Right_05: -172834175
+      Player_Attack_Right_06: 656698057
+      Player_Attack_Right_07: 38164743
+      Player_Attack_Right_08: 186521017
+      Player_Attack_Right_09: 641895828
+      Player_Attack_Right_10: 1455650212
+      Player_Attack_Right_11: -97133668
+      Player_Attack_Right_12: 1699375413
+      Player_Attack_Right_13: -213086066
+      Player_Attack_Right_14: 1801673487
+      Player_Attack_Right_15: -719546420
+      Player_Attack_Right_16: -1878362913
+      Player_Attack_Right_17: -1999399337
+      Player_Attack_Right_18: 856805814
+      Player_Idle_Down_0: -328149053
+      Player_Idle_Down_01: -1995078286
+      Player_Idle_Down_02: -315173255
+      Player_Idle_Down_03: -121125810
+      Player_Idle_Down_04: 185894714
+      Player_Idle_Down_05: -167533970
+      Player_Idle_Up_0: -139552819
+      Player_Idle_Up_01: 702980997
+      Player_Idle_Up_02: -228455284
+      Player_Idle_Up_03: -1233404436
+      Player_RUn_Down_07: 176724945
+      Player_Run_Down_0: 1017511756
+      Player_Run_Down_02: -1662116912
+      Player_Run_Down_03: 1216903581
+      Player_Run_Down_04: 573454149
+      Player_Run_Down_05: 463364507
+      Player_Run_Down_06: -2067252148
+      Player_Run_Down_08: 1023215388
+      Player_Run_Down_09: 322192370
+      Player_Run_Right_0: 1393990369
+      Player_Run_Right_01: 53288089
+      Player_Run_Right_02: 459230343
+      Player_Run_Right_03: 1253135669
+      Player_Run_Right_04: -578519105
+      Player_Run_Up_0: -1780815931
+      Player_Run_Up_01: -1389873880
+      Player_Run_Up_02: 1366027188
+      Player_Run_Up_03: -313100074
+      Player_Run_Up_04: -1460452449
+      Player_Run_Up_05: 319021680
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

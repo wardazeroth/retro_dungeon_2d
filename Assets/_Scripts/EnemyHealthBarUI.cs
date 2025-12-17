@@ -17,7 +17,9 @@ public class EnemyHealthBarUI : MonoBehaviour
         }
 
         // Conexión inversa: encontrar al padre EnemyHealth y suscribirse
-        EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
+        //EnemyHealth enemyHealth = GetComponent<EnemyHealth>();
+
+        EnemyHealth enemyHealth = GetComponentInParent<EnemyHealth>();
         if (enemyHealth != null)
         {
             enemyHealth.OnHealthChanged.AddListener(UpdateHealth);

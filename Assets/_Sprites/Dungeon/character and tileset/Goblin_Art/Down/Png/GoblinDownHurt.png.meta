@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0485994ed1b2fc4eb955c7cb06586a1
-      internalID: -1145186672
+      spriteID: 65eb4d902b1167045b90685bcec72985
+      internalID: 591246297
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33f168cbe035692499989e19ae3350eb
-      internalID: 1944322886
+      spriteID: 3abb00093a7bb61498d98ad7774c6d1a
+      internalID: -1278996210
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cee0a1feda5fd074394004184d85a9d7
-      internalID: -358010782
+      spriteID: b9043cf80ae4e3e4cbd695e339233201
+      internalID: 1540104080
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 450a9d0cf8761c64eab87be2980ed1b7
-      internalID: 1079895780
+      spriteID: 8b01f8008ca4ce54baa3be9597f07f67
+      internalID: 165931590
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GoblinDownHurt_0: -1145186672
-      GoblinDownHurt_1: 1944322886
-      GoblinDownHurt_2: -358010782
-      GoblinDownHurt_3: 1079895780
+      GoblinDownHurt_0: 591246297
+      GoblinDownHurt_1: -1278996210
+      GoblinDownHurt_2: 1540104080
+      GoblinDownHurt_3: 165931590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

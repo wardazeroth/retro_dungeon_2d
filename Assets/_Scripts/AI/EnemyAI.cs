@@ -188,8 +188,17 @@ public class EnemyAI : MonoBehaviour
             // FASE 1: ATAQUE
             DEBUG_MovementInput = Vector2.zero;
 
+
             //Detener la animación de movimiento antes de atacar
             animator?.SetBool("isMoving", false);
+
+            //Calcular dirección del Player antes de atacar
+            if (aiData.currentTarget != null)
+            {
+                Vector2 attackDir = (aiData.currentTarget.position - transform.position).normalized;
+                animator?.SetFloat("MoveX", attackDir.x);
+                animator?.SetFloat("MoveY", attackDir.y);
+            }
             
             //Activar el trigger de ataque
             animator?.SetTrigger("AttackTrigger");
@@ -267,6 +276,17 @@ public class EnemyAI : MonoBehaviour
                     Debug.Log($"¡Daño infligido al jugador! Daño: {attackDamage}");
                 }
             }
+        }
+    }
+
+    //Forzar que el Animator mire al jugador
+    public void FaceTarget()
+    {
+        if (aiData.currentTarget != null && animator != null)
+        {
+            Vector2 dir = (aiData.currentTarget.position - transform.position).normalized;
+            animator.SetFloat("MoveX", dir.x);
+            animator.SetFloat("MoveY", dir.y);
         }
     }
 }

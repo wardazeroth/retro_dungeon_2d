@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b1f2af2e5ea34c48925a1caa07a9a85
-      internalID: 1609254261
+      spriteID: 31c720c93f7a743489c07ea6a3508ec7
+      internalID: -656982266
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c95707d9fb62b0448897622c13ac0b8f
-      internalID: 900710530
+      spriteID: 29f980e633986b847a0b9f86ffd1788e
+      internalID: 1598141637
       vertices: []
       indices: 
       edges: []
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cea9204f8ca8e56428b2d0c85d284f1f
-      internalID: -1129980357
+      spriteID: 212020a6d36f23a408ffec864ece495d
+      internalID: -2093656181
       vertices: []
       indices: 
       edges: []
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 819682dfd268f5645bd781d1db837c8c
-      internalID: 1927851113
+      spriteID: 7451fab08942269459d5ccf9b4da58e2
+      internalID: -1770327487
       vertices: []
       indices: 
       edges: []
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ce60d30ad19844399d4d0c0f230f39
-      internalID: 1728338496
+      spriteID: ff7a8a15f6a3b324dbfb0061d319e6c6
+      internalID: -1085457120
       vertices: []
       indices: 
       edges: []
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6519480691e1fea47957ee8603d02938
-      internalID: -12594900
+      spriteID: ae5a54917f609c64986fcc9aa78cd048
+      internalID: 2110443586
       vertices: []
       indices: 
       edges: []
@@ -233,12 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GoblinDownIdle_0: 1609254261
-      GoblinDownIdle_1: 900710530
-      GoblinDownIdle_2: -1129980357
-      GoblinDownIdle_3: 1927851113
-      GoblinDownIdle_4: 1728338496
-      GoblinDownIdle_5: -12594900
+      GoblinDownIdle_0: -656982266
+      GoblinDownIdle_1: 1598141637
+      GoblinDownIdle_2: -2093656181
+      GoblinDownIdle_3: -1770327487
+      GoblinDownIdle_4: -1085457120
+      GoblinDownIdle_5: 2110443586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
