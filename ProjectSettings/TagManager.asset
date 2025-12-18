@@ -17,8 +17,8 @@ TagManager:
   - Obstacles
   - Enemy
   - Items
-  - 
-  - 
+  - MiniMapElements
+  - mapa
   - 
   - 
   - 
@@ -42,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: mapa
+    uniqueID: 518185947
     locked: 0
