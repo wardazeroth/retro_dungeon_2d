@@ -1,0 +1,1918 @@
+fileFormatVersion: 2
+guid: 3351ff4669c08804f8e150173929356e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 497
+        width: 100
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddb433cf3e258d42a50a7531e77c527
+      internalID: -410623069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 524
+        width: 55
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0867d2d1a18beff499925aae633d3061
+      internalID: -642500487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 514
+        width: 55
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3be1813421581a4e99051abbad6a689
+      internalID: -1337945318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 479
+        width: 159
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab198e44e418004eb671afc938a51da
+      internalID: 1190584266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 479
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4a1714ffea29c49bfbccc715e97e9a
+      internalID: -415525499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 479
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ab0d25b25468e4dbc84a3b23ffc27f
+      internalID: 1352782956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 367
+        width: 336
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8543364c7ede441884d7fc343889e7
+      internalID: 1305389112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 504
+        width: 55
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42544c5741a23484090be5c3f58a7309
+      internalID: 1247800143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 444
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d458c7471c77b4d4a84084b7f9416e05
+      internalID: -741753211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 444
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75a04114bde0d84eafa58b6d8f59dc6
+      internalID: 1945739836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 428
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9e005b94055444aa75eecd9f35c6eb
+      internalID: -132847852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 332
+        width: 64
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c0e2e97afab6844b674d4c5eacf2c2
+      internalID: -2095223688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 431
+        width: 156
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab37e6ed2cd90ea4eaaf690ff9ce5432
+      internalID: -2089872039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 447
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff97d66c351ef749a0d78d2e98d7586
+      internalID: -299924534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 447
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1356ac2e72bc104b973d0d5aa0668cf
+      internalID: -1484108182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 380
+        width: 4
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0efa1aec8eb7346ad9090204323f9c
+      internalID: 1915843639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 416
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254676c7b35ca084c9050c9abd8895c5
+      internalID: 1806023574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 380
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9a5725c828a424789837c6ecdf3528
+      internalID: 1701945135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 412
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db98fdc1d6d4c7429ba64863f72576e
+      internalID: -1046759425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 380
+        width: 64
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4e0dbddc73e304a882c9ae75d2278f
+      internalID: -1012679950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 383
+        width: 136
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dfc70bb3063df4690cd58b82710b14
+      internalID: -1580921286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 412
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4c0f55bf951f841a73be006fe2ef9d
+      internalID: -446707580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 413
+        width: 46
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fbb1eb6a5862c47a8c4d6e47996620
+      internalID: -1720814109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 364
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021438eb45d8f1f4fa8bf377a6f95a18
+      internalID: 1302958245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 380
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9916ed928a14f44b966d86d276da37
+      internalID: 278165441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 381
+        width: 46
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadab6961d8c93c43890a2b0f55821f2
+      internalID: 1135037083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 374
+        width: 48
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9f6fda2a5e1a947b398439eafe7cee
+      internalID: 212575619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 335
+        width: 160
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593d07112fa567d4da80112684a1aa8d
+      internalID: -1552340502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 350
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc36346f0d2a1749872540c4605a503
+      internalID: 1431231616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 357
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c966299d94f279d44b258e02af7240ac
+      internalID: -683656405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 357
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50b7b48c8a849b4c82a977ffb0146ee
+      internalID: 1266720748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 349
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681751fa37d29d74ebc9326294d959e1
+      internalID: 953607602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 332
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ee961f92132b94e844f3edd5f4e7e7
+      internalID: 1313753158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 348
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b480f981822e62e4d8e0cd122defac6d
+      internalID: -498410388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 332
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6af9a39c3f6534f8ba5c5cf5655fed
+      internalID: 54264850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 349
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349b70eb0b5819b4c8b4a679f43d6b36
+      internalID: -1918788364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 287
+        width: 416
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e468aac2c82b0a84296e5aad7c56cdc3
+      internalID: 275379943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 348
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee6be3699ae5e0429631b7c84ff0431
+      internalID: -2111047293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 348
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57358baf36766b84092b8e268415d3bf
+      internalID: 203760762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 332
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2bdc253084d0b47a64f70e9cfc3f22
+      internalID: -80398460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 332
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6acf923723f064bb38f3e543ce23f1
+      internalID: -1705807947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 333
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151cbcf603ff30c45bb06dd911fbcf04
+      internalID: -1948779555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 336
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16aba1e53d0c524785937f253f56012
+      internalID: 944273327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 332
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a43171ab750797648b214fe5655288ed
+      internalID: 612108611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 284
+        width: 256
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7abb0c14643154fbcc35fe55c4203c
+      internalID: 618566206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 288
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c467324b17c5b5b44ac48c59911bb89f
+      internalID: 2129889168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 287
+        width: 128
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ff8011676ffd540819452a6f54b848
+      internalID: -841664994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 110
+        width: 256
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a2e3b95c459584494234ff9864f4e5
+      internalID: 2031741917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 253
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec819fad83f66064a888333801330846
+      internalID: 1005628252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 220
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7881c2e02bca4438ca2be70c985c8f
+      internalID: -1896240178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 220
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30743bf0755e39e4eacda60dba8c4f82
+      internalID: 1531801517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 258
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9502efef7cb650442aa9cc20a3c11d08
+      internalID: -1697293022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 257
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97584fddc000ae84abd7cee576a3845a
+      internalID: 441403396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 258
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9cc98768c7e9c49a7fa3933324e350
+      internalID: -1097427492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 257
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4dcf8f85c838e45a6497556bdb1284
+      internalID: -1089068680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 258
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d751756feeb504fa536ef1acbc2a7d
+      internalID: -1712073373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 257
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86496b07a2caefd47858b35b502874a5
+      internalID: 1028043996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 237
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ec61c403d2e3146b0a236c1fafda9d
+      internalID: -1972342255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 226
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c634e4eb1bb884eb9b7511506006f5
+      internalID: -1033355743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 225
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2616ee20e9386f45b26dd9097a1c4d5
+      internalID: 1635242713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 226
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ce72f91305ca6488e2a0313b833f2a
+      internalID: 621008952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 225
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbd402c848091241920faaf4a4db13b
+      internalID: 1712400133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 226
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8634c4b29d969cb44baf2b3975da6a91
+      internalID: 501170306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 225
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772d5b05d118c6e4ea303e12a5a187d9
+      internalID: -1537057750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 221
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4817025560c174abc309b6a9d54316
+      internalID: 2138011841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_65
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 205
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001ed74d543ce5548941e36818687551
+      internalID: 1323612356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_66
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 194
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0ee1fd2bf7f234b9b7597d99d21dc9
+      internalID: -837248168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_67
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 193
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bb28cff41b8de4fb09bdcabf0ed500
+      internalID: -441639500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_68
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 194
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d38f74c7c94d54f8d759419d18bb9e
+      internalID: 2129911868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_69
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 193
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209de37df6d537743a03d5d4c545d57a
+      internalID: 1773098998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_70
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 194
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87d47f5b9afeb74189ccdc6fd550697
+      internalID: -1874258992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_71
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 193
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63df65597dfc91d46835140be5134a6d
+      internalID: 440239081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_72
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 189
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0244d7f0af94145965f053dd93e9e1
+      internalID: 1248137591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_73
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 172
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43ef908a04b19548a04a81bbd2cb354
+      internalID: -915075291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_74
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 172
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33f50220e287ee4591dcb0ce987a00f
+      internalID: -1696376383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_75
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 162
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613de6dc24489524dab98ab90a5eac73
+      internalID: 2128005165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_76
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 161
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b1eccd544a1e914eb19e2bdac9af515
+      internalID: -268531444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_77
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 162
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83d3312e9a38074e91670066ef01525
+      internalID: 1615849004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_78
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 161
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c14ff2f62f88314eb9304e30e46289b
+      internalID: 1862396976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_79
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 162
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effa6a71010cc1b49a8ae2b2c8fef4c5
+      internalID: 2134328807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_80
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 161
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3733c6af696d19d4dabe8b3e372b9cc3
+      internalID: 12787219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueStoneUI_SpriteSheet_81
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 23
+        width: 152
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a924de6ee62aec345a080018405def87
+      internalID: 700863889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BlueStoneUI_SpriteSheet_0: -410623069
+      BlueStoneUI_SpriteSheet_1: -642500487
+      BlueStoneUI_SpriteSheet_10: -132847852
+      BlueStoneUI_SpriteSheet_11: -2095223688
+      BlueStoneUI_SpriteSheet_12: -2089872039
+      BlueStoneUI_SpriteSheet_13: -299924534
+      BlueStoneUI_SpriteSheet_14: -1484108182
+      BlueStoneUI_SpriteSheet_15: 1915843639
+      BlueStoneUI_SpriteSheet_16: 1806023574
+      BlueStoneUI_SpriteSheet_17: 1701945135
+      BlueStoneUI_SpriteSheet_18: -1046759425
+      BlueStoneUI_SpriteSheet_19: -1012679950
+      BlueStoneUI_SpriteSheet_2: -1337945318
+      BlueStoneUI_SpriteSheet_20: -1580921286
+      BlueStoneUI_SpriteSheet_21: -446707580
+      BlueStoneUI_SpriteSheet_22: -1720814109
+      BlueStoneUI_SpriteSheet_23: 1302958245
+      BlueStoneUI_SpriteSheet_24: 278165441
+      BlueStoneUI_SpriteSheet_25: 1135037083
+      BlueStoneUI_SpriteSheet_26: 212575619
+      BlueStoneUI_SpriteSheet_27: -1552340502
+      BlueStoneUI_SpriteSheet_28: 1431231616
+      BlueStoneUI_SpriteSheet_29: -683656405
+      BlueStoneUI_SpriteSheet_3: 1190584266
+      BlueStoneUI_SpriteSheet_30: 1266720748
+      BlueStoneUI_SpriteSheet_31: 953607602
+      BlueStoneUI_SpriteSheet_32: 1313753158
+      BlueStoneUI_SpriteSheet_33: -498410388
+      BlueStoneUI_SpriteSheet_34: 54264850
+      BlueStoneUI_SpriteSheet_35: -1918788364
+      BlueStoneUI_SpriteSheet_36: 275379943
+      BlueStoneUI_SpriteSheet_37: -2111047293
+      BlueStoneUI_SpriteSheet_38: 203760762
+      BlueStoneUI_SpriteSheet_39: -80398460
+      BlueStoneUI_SpriteSheet_4: -415525499
+      BlueStoneUI_SpriteSheet_40: -1705807947
+      BlueStoneUI_SpriteSheet_41: -1948779555
+      BlueStoneUI_SpriteSheet_42: 944273327
+      BlueStoneUI_SpriteSheet_43: 612108611
+      BlueStoneUI_SpriteSheet_44: 618566206
+      BlueStoneUI_SpriteSheet_45: 2129889168
+      BlueStoneUI_SpriteSheet_46: -841664994
+      BlueStoneUI_SpriteSheet_47: 2031741917
+      BlueStoneUI_SpriteSheet_48: 1005628252
+      BlueStoneUI_SpriteSheet_49: -1896240178
+      BlueStoneUI_SpriteSheet_5: 1352782956
+      BlueStoneUI_SpriteSheet_50: 1531801517
+      BlueStoneUI_SpriteSheet_51: -1697293022
+      BlueStoneUI_SpriteSheet_52: 441403396
+      BlueStoneUI_SpriteSheet_53: -1097427492
+      BlueStoneUI_SpriteSheet_54: -1089068680
+      BlueStoneUI_SpriteSheet_55: -1712073373
+      BlueStoneUI_SpriteSheet_56: 1028043996
+      BlueStoneUI_SpriteSheet_57: -1972342255
+      BlueStoneUI_SpriteSheet_58: -1033355743
+      BlueStoneUI_SpriteSheet_59: 1635242713
+      BlueStoneUI_SpriteSheet_6: 1305389112
+      BlueStoneUI_SpriteSheet_60: 621008952
+      BlueStoneUI_SpriteSheet_61: 1712400133
+      BlueStoneUI_SpriteSheet_62: 501170306
+      BlueStoneUI_SpriteSheet_63: -1537057750
+      BlueStoneUI_SpriteSheet_64: 2138011841
+      BlueStoneUI_SpriteSheet_65: 1323612356
+      BlueStoneUI_SpriteSheet_66: -837248168
+      BlueStoneUI_SpriteSheet_67: -441639500
+      BlueStoneUI_SpriteSheet_68: 2129911868
+      BlueStoneUI_SpriteSheet_69: 1773098998
+      BlueStoneUI_SpriteSheet_7: 1247800143
+      BlueStoneUI_SpriteSheet_70: -1874258992
+      BlueStoneUI_SpriteSheet_71: 440239081
+      BlueStoneUI_SpriteSheet_72: 1248137591
+      BlueStoneUI_SpriteSheet_73: -915075291
+      BlueStoneUI_SpriteSheet_74: -1696376383
+      BlueStoneUI_SpriteSheet_75: 2128005165
+      BlueStoneUI_SpriteSheet_76: -268531444
+      BlueStoneUI_SpriteSheet_77: 1615849004
+      BlueStoneUI_SpriteSheet_78: 1862396976
+      BlueStoneUI_SpriteSheet_79: 2134328807
+      BlueStoneUI_SpriteSheet_8: -741753211
+      BlueStoneUI_SpriteSheet_80: 12787219
+      BlueStoneUI_SpriteSheet_81: 700863889
+      BlueStoneUI_SpriteSheet_9: 1945739836
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

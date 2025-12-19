@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-        private void OnTriggerEnter2D(Collider2D other)
+    void Update()
     {
-        PlayerInventory inventory = other.GetComponent<PlayerInventory>();
+        transform.Translate(Vector3.up * Mathf.Sin(Time.time * 5f) * 0.002f);
+    }
+    private void OnTriggerEnter2D(Collider2D other)
 
-        if (inventory != null)
+    {
+        Update();
+
+        if (other.CompareTag("Player"))
         {
-            inventory.CollectKey();
-
-            Destroy(gameObject);
+            PlayerInventory inventory = other.GetComponent<PlayerInventory>();
+            if (inventory != null)
+            {
+                inventory.CollectKey();
+                Destroy(gameObject); // La llave desaparece al tocarla
+            }
         }
     }
 }
