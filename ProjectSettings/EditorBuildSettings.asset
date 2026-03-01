@@ -6,6 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/EscenaMen\xFA.unity"
+    guid: 70165b09d0f1dbb47958bd9737078bd8
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 28da44e424ec6e64e9240dccc2e27fbd, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: dac98790513903d4aaa7b4d4052ebbb5, type: 3}

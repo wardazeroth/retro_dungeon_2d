@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,11 +12,19 @@ public class PlayerMovement : MonoBehaviour
     //Componentes
     private Rigidbody2D rb;
     private Vector2 movementInput;
-
     private Vector2 lastMoveDirection = Vector2.down;
+    private Vector2 keyboardInput;
+    private Vector2 joystickInput;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+
+    public UnityEngine.UI.Image fondoEspadaImage;
+
+    public void SetMovementInput(Vector2 input)
+    {
+        joystickInput = input;
+    }
 
     private void Start()
     {
@@ -29,6 +39,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // RESETEAR TODO AL NACER
+        movementInput = Vector2.zero;
+        joystickInput = Vector2.zero;
+        keyboardInput = Vector2.zero;
+        if (rb != null) rb.velocity = Vector2.zero;
 
         if (spriteRenderer == null)
         {
@@ -45,38 +61,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementInput.x = Input.GetAxisRaw("Horizontal");
-        movementInput.y = Input.GetAxisRaw("Vertical");
-        movementInput.Normalize();
+        keyboardInput.x= Input.GetAxisRaw("Horizontal");
+        keyboardInput.y = Input.GetAxisRaw("Vertical");
 
-        if (movementInput.magnitude > 0)
+        movementInput = keyboardInput + joystickInput;
+
+        if (movementInput.magnitude > 0.05f)
         {
-            Debug.Log($"Input Detectado: {movementInput}");
-        }
-        //Debug.Log($"Posición Rigidbody: {rb.position}");
-
-        //Lógica de animación y flipX
-        animator?.SetFloat("MoveX", movementInput.x);
-        animator?.SetFloat("MoveY", movementInput.y);
-
-        //Control de Bool para Idle/Run
-        bool isMoving = movementInput.magnitude > 0.05f;
-        animator?.SetBool("isMoving", isMoving);
-
-        //L+ogica para guardar la última dirección
-        if (isMoving)
-        {
-            //Si nos movemos, actalizamos la última dirección y la enviamos al Blend Tree
+            movementInput.Normalize();
             lastMoveDirection = movementInput;
-            animator.SetFloat("MoveX", movementInput.x);
-            animator.SetFloat("MoveY", movementInput.y);
+            Debug.Log($"Input Detectado: {movementInput}");
         }
         else
         {
-            //Si no nos movemos, enviamos la última dirección guardada
-            animator.SetFloat("MoveX", lastMoveDirection.x);
-            animator.SetFloat("MoveY", lastMoveDirection.y);
+            movementInput = Vector2.zero;
         }
+            //Debug.Log($"Posición Rigidbody: {rb.position}");
+
+            //Lógica de animación y flipX
+        animator?.SetFloat("MoveX", movementInput.magnitude > 0.05f ? movementInput.x : lastMoveDirection.x);
+        animator?.SetFloat("MoveY", movementInput.magnitude > 0.05f ? movementInput.y : lastMoveDirection.y);
+        animator?.SetBool("isMoving", movementInput.magnitude > 0.05f);
 
         //Lógica de Volteo
         if (movementInput.x > 0.05f)
@@ -87,17 +92,27 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == UnityEngine.TouchPhase.Began)
+            {
+                // En táctil, SOLO atacamos si toca la espada
+                if (EsClicEnEspada())
+                {
+                    RealizarAtaque();
+                }
+            }
+        }
+        else if (Input.GetMouseButtonDown(0))
+        {
+            RealizarAtaque();
+        }
 
         // Lógica de ataque
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            //Forzar que los valores de MoveX/MoveY al Blend Tree sean la última dirección
-            //(Vital para que el AttackBlend sepa qué clip de ataque ejecutar)
-            animator.SetFloat("MoveX", lastMoveDirection.x);
-            animator.SetFloat("MoveY", lastMoveDirection.y);
-
-            //Activamos el trigger para ir del MovementBlend al AttackBlend
-            animator.SetTrigger("AttackTrigger");
+            RealizarAtaque();
         }
     }
 
@@ -109,7 +124,45 @@ public class PlayerMovement : MonoBehaviour
             // El Rigidbody es Dynamic, por lo que las colisiones lo detendrán.
             Vector2 velocity = movementInput * moveSpeed;
 
-            rb.velocity = velocity; // 🌟 ¡USAR VELOCITY EN LUGAR DE MOVEPOSITION!
+            rb.velocity = velocity;
         }
     }
+
+    public void RealizarAtaque()
+    {
+        Debug.Log("¡CONEXIÓN EXITOSA!");
+
+        if (animator != null)
+        {
+            // Feedback visual manual (reemplaza al componente Button)
+
+            animator.ResetTrigger("AttackTrigger");
+            animator.SetTrigger("AttackTrigger");
+
+            if (fondoEspadaImage != null) StartCoroutine(FlashRojo());
+            Debug.Log("¡Ataque detectado por Event Trigger!");
+        }
+    }
+
+    IEnumerator FlashRojo()
+    {
+        fondoEspadaImage.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        fondoEspadaImage.color = Color.white;
+    }
+
+    bool EsClicEnEspada()
+{
+    PointerEventData eventData = new PointerEventData(EventSystem.current);
+    eventData.position = Input.mousePosition;
+    List<RaycastResult> results = new List<RaycastResult>();
+    EventSystem.current.RaycastAll(eventData, results);
+
+    foreach (var result in results)
+    {
+        if (result.gameObject.name == "FondoEspada") return true;
+    }
+    return false;
+    }
+
 }
